@@ -4,23 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Q2 Goals</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 48px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 28px; }
+    .slide { padding: 40px 80px; }
+    .title { font-size: 44px; margin-bottom: 24px; }
     .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; flex: 1; }
-    .col { background: #1a1a38; padding: 24px 28px; border: 1px solid rgba(255,255,255,0.07); display: flex; flex-direction: column; gap: 10px; }
-    .col-title { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-    .purple { color: #7c5af6; }
-    .yellow { color: #e8a020; }
-    .blue { color: #60a5fa; }
-    .sub { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 4px; }
-    .items { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+    .col { background: var(--card); border: 1.5px solid var(--border); padding: 22px 26px; border-radius: 4px; display: flex; flex-direction: column; gap: 10px; }
+    .col-top { height: 3px; margin-bottom: 14px; border-radius: 2px; }
+    .col-top-purple { background: var(--primary); }
+    .col-top-pink { background: var(--pink); }
+    .col-top-lime { background: #7ac200; }
+    .col-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+    .purple { color: var(--primary); }
+    .yellow { color: #92600a; }
+    .blue { color: #1a6baa; }
+    .sub { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .items { font-size: 12.5px; color: var(--muted); line-height: 1.8; }
     .items li { margin-left: 16px; margin-bottom: 2px; }
     .nested { margin-left: 28px; }
   </style>
@@ -31,6 +30,7 @@
     <div class="title">Q2 Goals</div>
     <div class="cols">
       <div class="col">
+        <div class="col-top col-top-purple"></div>
         <div class="col-title purple">Double Revenues</div>
         <div class="sub">Target: $2M run rate</div>
         <ul class="items">
@@ -40,6 +40,7 @@
         </ul>
       </div>
       <div class="col">
+        <div class="col-top col-top-pink"></div>
         <div class="col-title yellow">The Hand</div>
         <div class="sub">...coming soon</div>
         <ul class="items">
@@ -48,6 +49,7 @@
         </ul>
       </div>
       <div class="col">
+        <div class="col-top col-top-lime"></div>
         <div class="col-title blue">Service to Platform</div>
         <div class="sub">significant pricing leverage</div>
         <ul class="items">

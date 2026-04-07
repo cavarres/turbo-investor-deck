@@ -1,198 +1,132 @@
-/* ============================================================
-   TURBO INVESTOR DECK — THEME
-   Source of truth: TurboMvp/landing design system
-   ============================================================ */
+/* Turbo Investor Deck — Brand Theme */
+/* Matches turbotime.io landing page design system */
 
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=gambetta@400,400i,600,700,700i&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=gambetta@400,500,600,700&display=swap');
 
-/* --- Design Tokens --- */
 :root {
-  --primary:        #5200FF;
-  --primary-hover:  #4400D9;
-  --primary-light:  #E8E0FF;
-  --accent:         #AAFE05;
-  --accent-text:    #1A1A1A;
+  --primary:  #5200FF;
+  --pink:     #FF009D;
+  --lime:     #AAFE05;
+  --bg:       #fafafa;
+  --card:     #fff;
+  --border:   #ece9ff;
+  --text:     #111;
+  --muted:    #666;
+  --card-tint:#f4f0ff;
 
-  --bg:             #fafafa;
-  --surface:        #ffffff;
-  --border:         #E5E5E5;
-  --border-soft:    #ece9ff;
-
-  --text:           #1A1A1A;
-  --text-muted:     #737373;
-  --text-faint:     rgba(26,26,26,0.35);
-  --text-faint2:    rgba(26,26,26,0.2);
-
-  --green:          #16a34a;
-  --amber:          #d97706;
-  --red:            #FF0055;
-
-  --font-sans:      'Instrument Sans', -apple-system, sans-serif;
-  --font-serif:     'Gambetta', Georgia, serif;
+  --font-body: 'Instrument Sans', -apple-system, sans-serif;
+  --font-display: 'Gambetta', Georgia, serif;
 }
 
-/* --- Reset --- */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* --- Base --- */
 body {
   width: 1280px;
   height: 720px;
   overflow: hidden;
   background: var(--bg);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   color: var(--text);
-  -webkit-font-smoothing: antialiased;
 }
 
-/* --- Slide shell --- */
+/* Layout */
 .slide {
   width: 1280px;
   height: 720px;
-  position: relative;
-  background: var(--bg);
-}
-
-/* --- Header row --- */
-.slide-header {
+  padding: 44px 80px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+
+/* Header bar */
+.hdr {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
 }
-
-/* --- Labels & meta --- */
-.section-label {
+.sec {
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-faint);
-}
-
-.slide-num {
-  font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
-  color: var(--text-faint2);
-}
-
-.wordmark {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
+  color: var(--muted);
+}
+.wm {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   color: var(--primary);
+  font-family: var(--font-display);
 }
 
-/* --- Typography --- */
-.t-display {
-  font-family: var(--font-serif);
-  font-style: italic;
+/* Display headings */
+.title {
+  font-family: var(--font-display);
+  font-size: 48px;
   font-weight: 700;
-  color: var(--primary);
-  letter-spacing: -0.02em;
-  line-height: 0.88;
-}
-
-.t-headline {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 52px;
-  color: var(--text);
   letter-spacing: -0.025em;
+  color: var(--text);
   line-height: 1.05;
 }
 
-.t-pull {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 1.35;
-  color: var(--text);
-  letter-spacing: -0.01em;
-}
-
-.t-body {
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(26,26,26,0.75);
-}
-
-.t-body strong { color: var(--text); font-weight: 600; }
-
-.t-label {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-faint);
-}
-
-.t-primary { color: var(--primary); }
-.t-muted   { color: var(--text-muted); }
-.t-green   { color: var(--green); }
-.t-amber   { color: var(--amber); }
-
-/* --- Cards --- */
+/* Cards */
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  padding: 28px;
+}
+.card-tint {
+  background: var(--card-tint);
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  padding: 28px;
 }
 
-.card-soft {
-  background: var(--bg);
-  border: 1px solid var(--border-soft);
+/* Metric values */
+.val {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
-.card-accent {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--primary);
-}
-
-/* --- Chips --- */
+/* Chips / badges */
 .chip {
   display: inline-block;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  background: var(--lime);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 3px 8px;
-  white-space: nowrap;
+  padding: 3px 10px;
+  border-radius: 2px;
 }
-.chip-primary  { background: var(--primary);       color: #fff; }
-.chip-soft     { background: var(--primary-light);  color: var(--primary); }
-.chip-accent   { background: var(--accent);         color: var(--accent-text); }
-.chip-neutral  { background: #f4f4f4;               color: var(--text-muted); }
-.chip-green    { background: #dcfce7;               color: var(--green); }
-
-/* --- Divider --- */
-hr.divider {
-  border: none;
-  border-top: 1px solid var(--border);
-}
-
-/* --- Dot accent --- */
-.dot-accent {
-  width: 6px; height: 6px;
-  border-radius: 50%;
+.chip-purple {
   background: var(--primary);
-  flex-shrink: 0;
+  color: #fff;
+}
+.chip-pink {
+  background: var(--pink);
+  color: #fff;
 }
 
-/* --- Utility spacing --- */
-.mt-8  { margin-top: 8px; }
-.mt-12 { margin-top: 12px; }
-.mt-16 { margin-top: 16px; }
-.mt-24 { margin-top: 24px; }
-.mt-32 { margin-top: 32px; }
-.mt-40 { margin-top: 40px; }
-.mb-8  { margin-bottom: 8px; }
-.mb-12 { margin-bottom: 12px; }
-.mb-16 { margin-bottom: 16px; }
-.mb-24 { margin-bottom: 24px; }
-.mb-32 { margin-bottom: 32px; }
-.mb-40 { margin-bottom: 40px; }
+/* Accent bar (left border) */
+.accent-bar {
+  border-left: 3px solid var(--primary);
+  padding-left: 20px;
+}
+
+/* Text utilities */
+.text-primary  { color: var(--primary); }
+.text-pink     { color: var(--pink); }
+.text-lime     { color: #3d8600; } /* dark lime for legibility on white */
+.text-muted    { color: var(--muted); }
+.font-display  { font-family: var(--font-display); }

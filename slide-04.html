@@ -4,24 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Pipeline</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 48px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 4px; }
-    .subtitle { font-size: 20px; font-weight: 600; color: #7c5af6; margin-bottom: 20px; }
+    .slide { padding: 40px 80px; }
+    .title { font-size: 44px; margin-bottom: 4px; }
+    .subtitle { font-size: 18px; font-weight: 600; color: var(--primary); margin-bottom: 20px; }
     table { width: 730px; border-collapse: collapse; margin-bottom: 20px; }
-    th { font-size: 13px; font-weight: 600; color: #7c5af6; padding: 10px 16px; text-align: left; border: 1px solid rgba(124,90,246,0.4); background: rgba(124,90,246,0.12); }
-    td { font-size: 14px; padding: 10px 16px; border: 1px solid rgba(255,255,255,0.1); color: #fff; }
-    tr:last-child td { font-weight: 600; background: rgba(124,90,246,0.07); }
-    .g { color: #22c55e; font-weight: 500; }
-    .y { color: #e8a020; font-weight: 500; }
-    .callout { background: #1a1048; border: 1px solid rgba(124,90,246,0.4); padding: 18px 24px; max-width: 730px; }
-    .ct { font-size: 14px; font-weight: 600; color: #7c5af6; line-height: 1.8; }
+    th { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 10px 16px; text-align: left; border-bottom: 1.5px solid var(--border); background: var(--card-tint); }
+    td { font-size: 13.5px; padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text); }
+    tr:last-child td { font-weight: 600; background: var(--card-tint); border-bottom: none; }
+    .g { color: #1a7a3c; font-weight: 500; }
+    .y { color: #92600a; font-weight: 500; }
+    .callout { background: var(--card-tint); border: 1.5px solid var(--border); border-left: 3px solid var(--primary); padding: 16px 22px; max-width: 730px; border-radius: 4px; }
+    .ct { font-size: 13.5px; font-weight: 500; color: var(--text); line-height: 1.75; }
   </style>
 </head>
 <body>

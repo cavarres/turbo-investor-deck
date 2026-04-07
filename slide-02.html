@@ -4,19 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — CEO Letter</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .quote-block { background: #1a1048; border-left: 3px solid #7c5af6; padding: 22px 28px; margin-bottom: 24px; }
-    .qmark { font-size: 44px; font-weight: 700; color: #7c5af6; line-height: 0.7; display: block; margin-bottom: 6px; }
-    .qtext { font-size: 18px; line-height: 1.5; color: #fff; }
-    .body { font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
-    .sig { font-size: 15px; font-weight: 600; color: #7c5af6; margin-top: 2px; }
+    .slide { padding: 36px 80px 36px; }
+    .title { font-size: 36px; margin-bottom: 18px; }
+    .quote-block {
+      background: var(--card-tint);
+      border-left: 3px solid var(--primary);
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+    .qmark { font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--primary); line-height: 0.7; display: block; margin-bottom: 8px; }
+    .qtext { font-size: 15px; line-height: 1.55; color: var(--text); font-style: italic; }
+    .body { font-size: 13px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+    .sig { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--primary); margin-top: 4px; }
   </style>
 </head>
 <body>
@@ -25,6 +26,7 @@
       <div class="sec">CEO Letter</div>
       <div class="wm">TURBO.</div>
     </div>
+    <div class="title">CEO Letter</div>
     <div class="quote-block">
       <span class="qmark">&ldquo;</span>
       <div class="qtext">Q1 was a quarter of 4x growth. We exceeded our $1M run rate target 2 weeks early&mdash; but simultaneously had a major technology breakthrough&mdash; so I paused revenue growth to redistribute talent against product initiatives</div>

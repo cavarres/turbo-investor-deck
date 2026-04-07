@@ -4,29 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Growth &amp; Team</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #f87171; }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 48px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 24px; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
-    .card { background: #1a1a38; padding: 26px 28px; border: 1px solid rgba(255,255,255,0.07); }
-    .val { font-size: 44px; font-weight: 700; color: #e8a020; line-height: 1; margin-bottom: 12px; letter-spacing: -0.02em; }
-    .lbl { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 8px; }
-    .sub { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; }
-    .bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .bs h4 { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); text-decoration: underline; margin-bottom: 10px; }
-    .bs p { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.75; }
-    .note { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 12px; font-style: italic; }
+    .slide { padding: 40px 80px; }
+    .title { font-size: 44px; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+    .card { background: var(--card); border: 1.5px solid var(--border); padding: 24px 26px; border-radius: 4px; }
+    .val { font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .lbl { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .sub { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .bs h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .bs p { font-size: 13px; color: var(--text); line-height: 1.75; }
+    .note { font-size: 12px; color: var(--muted); margin-top: 10px; font-style: italic; }
+    .sec-red { color: var(--pink); }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Red Team</div><div class="wm">TURBO.</div></div>
+    <div class="hdr"><div class="sec sec-red">Red Team</div><div class="wm">TURBO.</div></div>
     <div class="title">Growth &amp; Team</div>
     <div class="grid">
       <div class="card"><div class="val">240%</div><div class="lbl">LinkedIn Target Hit</div><div class="sub">12,001 followers (5K target)</div></div>

@@ -4,30 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Closing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; position: relative; }
-    .purple-band { position: absolute; top: 0; left: 0; right: 0; height: 265px; background: #160b38; }
-    .content { position: relative; padding: 56px 80px; display: flex; flex-direction: column; height: 100%; }
-    .logo-line { width: 90px; height: 3px; background: #7c5af6; margin-bottom: 14px; }
-    .wordmark { font-size: 18px; font-weight: 700; letter-spacing: 0.1em; color: #7c5af6; margin-bottom: 48px; }
-    .quote { font-size: 36px; font-weight: 700; line-height: 1.3; color: #fff; letter-spacing: -0.02em; margin-bottom: 56px; max-width: 900px; }
-    .contact { margin-bottom: 12px; }
-    .email { font-size: 16px; font-weight: 500; color: #7c5af6; margin-bottom: 6px; }
-    .linkedin { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
-    .conf { font-size: 14px; color: rgba(255,255,255,0.4); }
+    body { position: relative; overflow: hidden; }
+    .accent-strip { position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--primary); }
+    .content { position: relative; padding: 72px 96px 72px 104px; height: 720px; display: flex; flex-direction: column; justify-content: space-between; }
+    .top-wm { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 48px; }
+    .quote { font-family: var(--font-display); font-size: 34px; font-weight: 700; line-height: 1.3; color: var(--text); letter-spacing: -0.02em; margin-bottom: 56px; max-width: 860px; }
+    .contact { display: flex; flex-direction: column; gap: 6px; }
+    .email { font-size: 15px; font-weight: 500; color: var(--primary); }
+    .linkedin { font-size: 15px; color: var(--muted); }
+    .conf { font-size: 12px; color: var(--muted); margin-top: 16px; }
   </style>
 </head>
 <body>
-  <div class="purple-band"></div>
+  <div class="accent-strip"></div>
   <div class="content">
-    <div class="logo-line"></div>
-    <div class="wordmark">TURBO.</div>
-    <div class="quote">&ldquo;This is not a product development tool. It is far bigger than a product development system. This is an operating system. This is the future of the computer.&rdquo;</div>
-    <div class="email">jeremy@turbotime.io</div>
-    <div class="linkedin">linkedin.com/company/turbotime-ai</div>
-    <div class="conf">Confidential &nbsp;&mdash;&nbsp; March 2026</div>
+    <div>
+      <div class="top-wm">TURBO.</div>
+      <div class="quote">&ldquo;This is not a product development tool. It is far bigger than a product development system. This is an operating system. This is the future of the computer.&rdquo;</div>
+    </div>
+    <div class="contact">
+      <div class="email">jeremy@turbotime.io</div>
+      <div class="linkedin">linkedin.com/company/turbotime-ai</div>
+      <div class="conf">Confidential &nbsp;&mdash;&nbsp; March 2026</div>
+    </div>
   </div>
 </body>
 </html>

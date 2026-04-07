@@ -4,32 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Orchestration</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); max-width: 700px; }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 44px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 20px; }
-    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 12px; }
-    .stat { background: #1a1a38; padding: 24px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.07); }
-    .sv { font-size: 52px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
-    .sv-a { color: #7c5af6; }
-    .sv-h { color: #e8a020; }
-    .sv-w { color: #60a5fa; }
-    .sl { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; }
-    .caption { font-size: 14px; color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 16px; }
-    .cascade { background: #1a1048; border: 1px solid rgba(124,90,246,0.3); padding: 18px 24px; margin-bottom: 16px; }
-    .ct { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 10px; }
-    .cf { font-size: 13px; color: #7c5af6; line-height: 1.6; }
-    .bottom { font-size: 18px; font-weight: 700; color: #fff; text-align: center; }
+    .slide { padding: 40px 80px; }
+    .title { font-size: 40px; margin-bottom: 20px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 14px; }
+    .stat { background: var(--card); border: 1.5px solid var(--border); padding: 22px 26px; text-align: center; border-radius: 4px; }
+    .sv { font-family: var(--font-display); font-size: 48px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .sv-a { color: var(--primary); }
+    .sv-h { color: var(--pink); }
+    .sv-w { color: #92600a; }
+    .sl { font-size: 13px; color: var(--muted); font-weight: 500; }
+    .caption { font-size: 13px; color: var(--muted); text-align: center; margin-bottom: 16px; font-style: italic; }
+    .cascade { background: var(--card-tint); border: 1.5px solid var(--border); border-left: 3px solid var(--primary); padding: 16px 22px; margin-bottom: 16px; border-radius: 4px; }
+    .ct { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+    .cf { font-size: 13px; color: var(--primary); line-height: 1.65; }
+    .bottom { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text); text-align: center; padding: 16px; background: var(--card); border: 1.5px solid var(--border); border-radius: 4px; }
+    .sec-sm { max-width: 700px; font-size: 10.5px; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Story 2: Agentic Middle Management&mdash; The Hand's Origin</div><div class="wm">TURBO.</div></div>
+    <div class="hdr"><div class="sec sec-sm">Story 2: Agentic Middle Management&mdash; The Hand's Origin</div><div class="wm">TURBO.</div></div>
     <div class="title">Next: Orchestration of agentic teams</div>
     <div class="stats">
       <div class="stat"><div class="sv sv-a">~4%</div><div class="sl">Agent Work Time</div></div>

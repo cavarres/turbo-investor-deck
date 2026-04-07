@@ -4,24 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Headline Metrics</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 48px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 52px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 36px; }
-    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 44px; }
-    .card { background: #1a1a38; padding: 32px 28px; border: 1px solid rgba(124,90,246,0.15); }
-    .val { font-size: 48px; font-weight: 700; color: #7c5af6; line-height: 1; margin-bottom: 14px; letter-spacing: -0.02em; }
-    .lbl { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 8px; }
-    .sub { font-size: 12px; color: rgba(255,255,255,0.4); }
-    .bottom { display: flex; gap: 56px; align-items: baseline; }
-    .bi { display: flex; gap: 12px; align-items: baseline; }
-    .bl { font-size: 16px; color: rgba(255,255,255,0.6); }
-    .bv { font-size: 32px; font-weight: 700; color: #7c5af6; letter-spacing: -0.02em; }
+    .slide { padding: 40px 80px; }
+    .title { font-size: 44px; margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 36px; }
+    .card { border: 1.5px solid var(--border); background: var(--card); padding: 28px 24px; border-radius: 4px; }
+    .val { font-family: var(--font-display); font-size: 44px; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lbl { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .sub { font-size: 11px; color: var(--muted); }
+    .bottom { display: flex; gap: 56px; align-items: baseline; padding-top: 20px; border-top: 1px solid var(--border); }
+    .bi { display: flex; gap: 10px; align-items: baseline; }
+    .bl { font-size: 14px; color: var(--muted); }
+    .bv { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
   </style>
 </head>
 <body>
