@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo — Q1 2026: Strategic Bets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .left {
+      padding: 64px 60px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ece9ff;
+    }
+    .right {
+      padding: 64px 60px;
+      display: flex;
+      flex-direction: column;
+    }
+    .col-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.35);
+      margin-bottom: 36px;
+    }
+    .col-title {
+      font-size: 30px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 40px;
+    }
+    .bet-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .bet-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #f0eeff;
+    }
+    .bet-item:last-child { border-bottom: none; }
+    .bet-num {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 28px;
+      color: #5200FF;
+      line-height: 1;
+      min-width: 28px;
+    }
+    .bet-content {}
+    .bet-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .bet-desc {
+      font-size: 12px;
+      color: rgba(17,17,17,0.55);
+      line-height: 1.5;
+    }
+    .risk-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .risk-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #f0eeff;
+    }
+    .risk-item:last-child { border-bottom: none; }
+    .risk-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .risk-badge {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+    }
+    .risk-badge.high { background: #fee2e2; color: #dc2626; }
+    .risk-badge.med { background: #fef3c7; color: #d97706; }
+    .risk-badge.low { background: #dcfce7; color: #16a34a; }
+    .risk-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+    }
+    .risk-desc {
+      font-size: 12px;
+      color: rgba(17,17,17,0.5);
+      line-height: 1.5;
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(17,17,17,0.2);
+      letter-spacing: 0.12em;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="left">
+      <div class="col-label">Strategic Bets — Q2 2026</div>
+      <div class="col-title">Three things we're doubling down on</div>
+      <div class="bet-list">
+        <div class="bet-item">
+          <div class="bet-num">1</div>
+          <div class="bet-content">
+            <div class="bet-title">Outcome-based pricing</div>
+            <div class="bet-desc">Shift top 10 clients to outcome SLAs by end of Q2. Expected ACV lift of 30-40%.</div>
+          </div>
+        </div>
+        <div class="bet-item">
+          <div class="bet-num">2</div>
+          <div class="bet-content">
+            <div class="bet-title">Mano Derecha as a product</div>
+            <div class="bet-desc">Package the AI right-hand platform as a standalone SKU. Target founder and exec buyers at $1.5K/mo.</div>
+          </div>
+        </div>
+        <div class="bet-item">
+          <div class="bet-num">3</div>
+          <div class="bet-content">
+            <div class="bet-title">LatAm expansion</div>
+            <div class="bet-desc">Open São Paulo office in Q3. Pipeline of 22 prospects in Brazil and Mexico already warm.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="col-label">Risks &amp; Mitigations</div>
+      <div class="col-title">What keeps us honest</div>
+      <div class="risk-list">
+        <div class="risk-item">
+          <div class="risk-header">
+            <div class="risk-badge high">High</div>
+            <div class="risk-title">AI model cost volatility</div>
+          </div>
+          <div class="risk-desc">Mitigation: multi-provider strategy + model routing layer to optimize cost per token.</div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-header">
+            <div class="risk-badge med">Med</div>
+            <div class="risk-title">Client concentration</div>
+          </div>
+          <div class="risk-desc">Top 3 clients = 28% of ARR. Diversifying — no single client above 12%.</div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-header">
+            <div class="risk-badge med">Med</div>
+            <div class="risk-title">PM hiring bottleneck</div>
+          </div>
+          <div class="risk-desc">Growth limited by senior PM supply. Building internal PM academy for Q3 launch.</div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-header">
+            <div class="risk-badge low">Low</div>
+            <div class="risk-title">Competitive displacement</div>
+          </div>
+          <div class="risk-desc">No direct comps at our delivery quality. Incumbents (agencies) too slow to retool.</div>
+        </div>
+      </div>
+      <div class="slide-num">09 / 12</div>
+    </div>
+  </div>
+</body>
+</html>

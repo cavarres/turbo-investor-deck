@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo — Q1 2026: What We Need</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .left {
+      background: #111;
+      padding: 64px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .ask-block {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .ask-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+    .ask-amount {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 96px;
+      line-height: 0.85;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    .ask-type {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      margin-top: 16px;
+    }
+    .ask-desc {
+      margin-top: 24px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+      max-width: 320px;
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.12em;
+    }
+    .right {
+      padding: 64px 60px;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111;
+      letter-spacing: -0.01em;
+      margin-bottom: 36px;
+    }
+    .use-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .use-item {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0eeff;
+    }
+    .use-item:last-child { border-bottom: none; }
+    .use-pct {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 36px;
+      color: #5200FF;
+      min-width: 72px;
+    }
+    .use-bar-wrap {
+      flex: 1;
+      height: 6px;
+      background: #f0eeff;
+      border-radius: 3px;
+    }
+    .use-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: #5200FF;
+    }
+    .use-text {
+      min-width: 160px;
+      text-align: right;
+    }
+    .use-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+    }
+    .use-sub {
+      font-size: 11px;
+      color: rgba(17,17,17,0.45);
+    }
+    .terms-row {
+      margin-top: 28px;
+      padding: 16px 20px;
+      background: #f8f7ff;
+      border: 1px solid #ece9ff;
+      display: flex;
+      gap: 32px;
+    }
+    .term {
+      display: flex;
+      flex-direction: column;
+    }
+    .term-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.4);
+      margin-bottom: 4px;
+    }
+    .term-val {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="left">
+      <div class="section-label">What We Need</div>
+      <div class="ask-block">
+        <div class="ask-label">Bridge Round</div>
+        <div class="ask-amount">$1.5M</div>
+        <div class="ask-type">SAFE — MFN, No Discount Cap</div>
+        <div class="ask-desc">We're profitable but want to accelerate LatAm expansion and Mano Derecha's product launch without slowing core delivery.</div>
+      </div>
+      <div class="slide-num">11 / 12</div>
+    </div>
+
+    <div class="right">
+      <div class="right-title">Use of funds</div>
+      <div class="use-list">
+        <div class="use-item">
+          <div class="use-pct">40%</div>
+          <div class="use-bar-wrap"><div class="use-bar" style="width:100%"></div></div>
+          <div class="use-text">
+            <div class="use-title">Engineering hires</div>
+            <div class="use-sub">4 eng × 12 months</div>
+          </div>
+        </div>
+        <div class="use-item">
+          <div class="use-pct">30%</div>
+          <div class="use-bar-wrap"><div class="use-bar" style="width:75%"></div></div>
+          <div class="use-text">
+            <div class="use-title">LatAm expansion</div>
+            <div class="use-sub">São Paulo ops + sales</div>
+          </div>
+        </div>
+        <div class="use-item">
+          <div class="use-pct">20%</div>
+          <div class="use-bar-wrap"><div class="use-bar" style="width:50%"></div></div>
+          <div class="use-text">
+            <div class="use-title">Mano Derecha launch</div>
+            <div class="use-sub">Product + GTM</div>
+          </div>
+        </div>
+        <div class="use-item">
+          <div class="use-pct">10%</div>
+          <div class="use-bar-wrap"><div class="use-bar" style="width:25%"></div></div>
+          <div class="use-text">
+            <div class="use-title">Working capital</div>
+            <div class="use-sub">Buffer + infra costs</div>
+          </div>
+        </div>
+      </div>
+      <div class="terms-row">
+        <div class="term">
+          <div class="term-label">Runway (post-raise)</div>
+          <div class="term-val">24+ months</div>
+        </div>
+        <div class="term">
+          <div class="term-label">Round closes</div>
+          <div class="term-val">June 30, 2026</div>
+        </div>
+        <div class="term">
+          <div class="term-label">Lead investor</div>
+          <div class="term-val">TBD</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

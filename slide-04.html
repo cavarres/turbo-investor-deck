@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo — Q1 2026: Client Growth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      padding: 64px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.35);
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(17,17,17,0.2);
+      letter-spacing: 0.12em;
+    }
+    .headline {
+      font-size: 40px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 48px;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      flex: 1;
+    }
+    .panel {
+      background: #fff;
+      border: 1px solid #ece9ff;
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+    .panel-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.4);
+      margin-bottom: 24px;
+    }
+    .funnel-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid #f4f2ff;
+    }
+    .funnel-row:last-child { border-bottom: none; }
+    .funnel-label {
+      font-size: 13px;
+      color: rgba(17,17,17,0.6);
+    }
+    .funnel-count {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 28px;
+      color: #111;
+    }
+    .funnel-bar-wrap {
+      flex: 1;
+      margin: 0 20px;
+      height: 6px;
+      background: #f0eeff;
+      border-radius: 3px;
+    }
+    .funnel-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: #5200FF;
+    }
+    .segment-list {
+      flex: 1;
+    }
+    .segment-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #f4f2ff;
+    }
+    .segment-row:last-child { border-bottom: none; }
+    .seg-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    .seg-name {
+      font-size: 13px;
+      color: rgba(17,17,17,0.7);
+      flex: 1;
+    }
+    .seg-pct {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+    }
+    .seg-count {
+      font-size: 12px;
+      color: rgba(17,17,17,0.4);
+      margin-left: 16px;
+      min-width: 40px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide-header">
+      <div class="section-label">Client Growth</div>
+      <div class="slide-num">04 / 12</div>
+    </div>
+
+    <div class="headline">47 active clients. 12 net new in Q1.</div>
+
+    <div class="content-grid">
+      <div class="panel">
+        <div class="panel-title">Pipeline — End of Q1 2026</div>
+        <div class="funnel-row">
+          <div class="funnel-label">Leads</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%"></div></div>
+          <div class="funnel-count">184</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Qualified</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:52%"></div></div>
+          <div class="funnel-count">96</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Proposals</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:28%"></div></div>
+          <div class="funnel-count">51</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Closed Won (Q1)</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:13%"></div></div>
+          <div class="funnel-count" style="color:#5200FF">24</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Net New Clients</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:6.5%"></div></div>
+          <div class="funnel-count" style="color:#5200FF">12</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Client Mix by Segment</div>
+        <div class="segment-list">
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#5200FF"></div>
+            <div class="seg-name">EdTech platforms</div>
+            <div class="seg-pct">34%</div>
+            <div class="seg-count">16 clients</div>
+          </div>
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#8b5cf6"></div>
+            <div class="seg-name">B2B SaaS</div>
+            <div class="seg-pct">26%</div>
+            <div class="seg-count">12 clients</div>
+          </div>
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#a78bfa"></div>
+            <div class="seg-name">D2C e-commerce</div>
+            <div class="seg-pct">19%</div>
+            <div class="seg-count">9 clients</div>
+          </div>
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#c4b5fd"></div>
+            <div class="seg-name">FinTech</div>
+            <div class="seg-pct">13%</div>
+            <div class="seg-count">6 clients</div>
+          </div>
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#ede9fe"></div>
+            <div class="seg-name">Other</div>
+            <div class="seg-pct">8%</div>
+            <div class="seg-count">4 clients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo — Q1 2026: Financials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      padding: 64px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.35);
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(17,17,17,0.2);
+      letter-spacing: 0.12em;
+    }
+    .headline {
+      font-size: 40px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 40px;
+    }
+    .fin-table {
+      width: 100%;
+      border-collapse: collapse;
+      flex: 1;
+    }
+    .fin-table th {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.4);
+      text-align: right;
+      padding: 0 0 16px;
+      border-bottom: 1px solid #ece9ff;
+    }
+    .fin-table th:first-child { text-align: left; }
+    .fin-table td {
+      font-size: 14px;
+      color: rgba(17,17,17,0.7);
+      text-align: right;
+      padding: 14px 0;
+      border-bottom: 1px solid #f8f7ff;
+    }
+    .fin-table td:first-child {
+      text-align: left;
+      color: rgba(17,17,17,0.6);
+    }
+    .fin-table tr.total td {
+      font-weight: 700;
+      color: #111;
+      border-top: 1px solid #ece9ff;
+      border-bottom: 2px solid #ece9ff;
+      padding-top: 16px;
+    }
+    .fin-table tr.positive td:last-child { color: #16a34a; font-weight: 600; }
+    .fin-table tr.highlight td {
+      background: #f8f7ff;
+      color: #5200FF;
+      font-weight: 700;
+    }
+    .fin-table tr.highlight td:first-child { color: #5200FF; padding-left: 12px; }
+    .note {
+      margin-top: 20px;
+      font-size: 11px;
+      color: rgba(17,17,17,0.35);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide-header">
+      <div class="section-label">Financials</div>
+      <div class="slide-num">08 / 12</div>
+    </div>
+
+    <div class="headline">First quarter of positive operating cash flow.</div>
+
+    <table class="fin-table">
+      <thead>
+        <tr>
+          <th style="width:40%">P&amp;L Summary (USD)</th>
+          <th>Q3 2025</th>
+          <th>Q4 2025</th>
+          <th>Q1 2026</th>
+          <th>QoQ Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Revenue</td>
+          <td>$340K</td>
+          <td>$380K</td>
+          <td>$525K</td>
+          <td style="color:#16a34a;font-weight:600">+38%</td>
+        </tr>
+        <tr>
+          <td>Cost of Revenue</td>
+          <td>($122K)</td>
+          <td>($125K)</td>
+          <td>($152K)</td>
+          <td style="color:rgba(17,17,17,0.5)">+22%</td>
+        </tr>
+        <tr class="total">
+          <td>Gross Profit</td>
+          <td>$218K</td>
+          <td>$255K</td>
+          <td>$373K</td>
+          <td style="color:#16a34a">+46%</td>
+        </tr>
+        <tr>
+          <td style="padding-left:16px;color:rgba(17,17,17,0.45);font-size:12px">Gross Margin</td>
+          <td style="color:rgba(17,17,17,0.45);font-size:12px">64%</td>
+          <td style="color:rgba(17,17,17,0.45);font-size:12px">67%</td>
+          <td style="color:rgba(17,17,17,0.45);font-size:12px">71%</td>
+          <td style="color:#16a34a;font-size:12px">+4 pts</td>
+        </tr>
+        <tr>
+          <td>Operating Expenses</td>
+          <td>($298K)</td>
+          <td>($310K)</td>
+          <td>($345K)</td>
+          <td style="color:rgba(17,17,17,0.5)">+11%</td>
+        </tr>
+        <tr class="highlight">
+          <td>Operating Income</td>
+          <td style="color:rgba(17,17,17,0.5);background:none;font-weight:400">($80K)</td>
+          <td style="color:rgba(17,17,17,0.5);background:none;font-weight:400">($55K)</td>
+          <td>+$28K</td>
+          <td style="color:#16a34a">First profit</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">Figures are unaudited. Q1 2026 closes March 31, 2026. Cash on hand: $1.84M.</div>
+  </div>
+</body>
+</html>

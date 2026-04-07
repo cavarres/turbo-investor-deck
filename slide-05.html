@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo — Q1 2026: Product & Delivery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .col {
+      padding: 64px 60px;
+      display: flex;
+      flex-direction: column;
+    }
+    .col:first-child {
+      border-right: 1px solid #ece9ff;
+    }
+    .col-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.35);
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(17,17,17,0.2);
+      letter-spacing: 0.12em;
+    }
+    .col-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 36px;
+    }
+    .shipped-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .shipped-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0eeff;
+    }
+    .shipped-item:last-child { border-bottom: none; }
+    .chip {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .chip.shipped {
+      background: #5200FF;
+      color: #fff;
+    }
+    .chip.beta {
+      background: #ece9ff;
+      color: #5200FF;
+    }
+    .chip.planned {
+      background: #f4f4f4;
+      color: rgba(17,17,17,0.45);
+    }
+    .item-text {
+      font-size: 13px;
+      color: rgba(17,17,17,0.7);
+      line-height: 1.4;
+    }
+    .item-text strong {
+      color: #111;
+      font-weight: 600;
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      flex: 1;
+    }
+    .metric-box {
+      background: #fff;
+      border: 1px solid #ece9ff;
+      padding: 24px 20px;
+    }
+    .metric-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(17,17,17,0.4);
+      margin-bottom: 12px;
+    }
+    .metric-value {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 40px;
+      color: #111;
+      line-height: 0.9;
+    }
+    .metric-sub {
+      margin-top: 8px;
+      font-size: 12px;
+      color: rgba(17,17,17,0.45);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="col">
+      <div class="col-header">
+        <div class="section-label">Product &amp; Delivery</div>
+      </div>
+      <div class="col-title">What we shipped in Q1</div>
+      <div class="shipped-list">
+        <div class="shipped-item">
+          <div class="chip shipped">Shipped</div>
+          <div class="item-text"><strong>Gio v2</strong> — agentic issue implementation with full PR workflow automation</div>
+        </div>
+        <div class="shipped-item">
+          <div class="chip shipped">Shipped</div>
+          <div class="item-text"><strong>Multi-agent orchestration</strong> — parallel workstreams, up to 5x throughput</div>
+        </div>
+        <div class="shipped-item">
+          <div class="chip shipped">Shipped</div>
+          <div class="item-text"><strong>Client dashboard v1</strong> — real-time cycle visibility for external stakeholders</div>
+        </div>
+        <div class="shipped-item">
+          <div class="chip beta">Beta</div>
+          <div class="item-text"><strong>Mano Derecha</strong> — AI right-hand for founders; early access with 6 clients</div>
+        </div>
+        <div class="shipped-item">
+          <div class="chip planned">Q2</div>
+          <div class="item-text"><strong>Outcome SLAs</strong> — guaranteed delivery commitments tied to billing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="col-header">
+        <div></div>
+        <div class="slide-num">05 / 12</div>
+      </div>
+      <div class="col-title">Delivery metrics</div>
+      <div class="metric-grid">
+        <div class="metric-box">
+          <div class="metric-label">Avg Cycle Time</div>
+          <div class="metric-value">4.2d</div>
+          <div class="metric-sub">Down from 7.1d in Q4</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Stories Shipped</div>
+          <div class="metric-value">1,840</div>
+          <div class="metric-sub">Across all client teams</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">PR Acceptance Rate</div>
+          <div class="metric-value">94%</div>
+          <div class="metric-sub">First-pass merge rate</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Client CSAT</div>
+          <div class="metric-value">4.7<span style="font-size:22px">/5</span></div>
+          <div class="metric-sub">n=47 quarterly survey</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

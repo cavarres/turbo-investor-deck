@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo — Q1 2026: Team</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      padding: 64px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.35);
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(17,17,17,0.2);
+      letter-spacing: 0.12em;
+    }
+    .headline {
+      font-size: 40px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 48px;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      flex: 1;
+    }
+    .team-card {
+      background: #fff;
+      border: 1px solid #ece9ff;
+      padding: 28px 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-dept {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #5200FF;
+      margin-bottom: 20px;
+    }
+    .card-headcount {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 56px;
+      color: #111;
+      line-height: 0.85;
+      margin-bottom: 4px;
+    }
+    .card-label {
+      font-size: 13px;
+      color: rgba(17,17,17,0.5);
+      margin-bottom: 20px;
+    }
+    .card-divider {
+      height: 1px;
+      background: #f0eeff;
+      margin-bottom: 16px;
+    }
+    .card-notes {
+      font-size: 12px;
+      color: rgba(17,17,17,0.55);
+      line-height: 1.5;
+      flex: 1;
+    }
+    .card-notes strong {
+      color: #111;
+      font-weight: 600;
+    }
+    .bottom-row {
+      display: flex;
+      gap: 32px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #ece9ff;
+    }
+    .bottom-stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .bottom-stat-val {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.02em;
+    }
+    .bottom-stat-label {
+      font-size: 12px;
+      color: rgba(17,17,17,0.4);
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide-header">
+      <div class="section-label">Team</div>
+      <div class="slide-num">06 / 12</div>
+    </div>
+
+    <div class="headline">32 people. Lean, specialized, and growing.</div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="card-dept">Engineering</div>
+        <div class="card-headcount">14</div>
+        <div class="card-label">engineers &amp; AI specialists</div>
+        <div class="card-divider"></div>
+        <div class="card-notes">Mostly senior. <strong>6 new hires in Q1</strong>, all agentic AI background. Gio core team is 4 people.</div>
+      </div>
+      <div class="team-card">
+        <div class="card-dept">Product Management</div>
+        <div class="card-headcount">8</div>
+        <div class="card-label">PMs embedded in client teams</div>
+        <div class="card-divider"></div>
+        <div class="card-notes"><strong>Sergio</strong> promoted to Senior PM. <strong>Juan</strong> onboarding this week. PM ratio: 1 per 6 clients.</div>
+      </div>
+      <div class="team-card">
+        <div class="card-dept">GTM &amp; Ops</div>
+        <div class="card-headcount">10</div>
+        <div class="card-label">sales, CS, and operations</div>
+        <div class="card-divider"></div>
+        <div class="card-notes">Sales cycle averaging <strong>18 days</strong> — down from 31 in Q3 2025. CS team owns expansion revenue.</div>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <div class="bottom-stat">
+        <div class="bottom-stat-val">$65.6K</div>
+        <div class="bottom-stat-label">ARR per employee</div>
+      </div>
+      <div class="bottom-stat">
+        <div class="bottom-stat-val">18 days</div>
+        <div class="bottom-stat-label">Avg sales cycle</div>
+      </div>
+      <div class="bottom-stat">
+        <div class="bottom-stat-val">3 open roles</div>
+        <div class="bottom-stat-label">Hiring now: Eng x2, CS x1</div>
+      </div>
+      <div class="bottom-stat">
+        <div class="bottom-stat-val">0%</div>
+        <div class="bottom-stat-label">Attrition in Q1</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
