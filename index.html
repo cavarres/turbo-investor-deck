@@ -69,6 +69,14 @@
       if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevSlide();
     });
 
+    // Touch swipe support
+    let touchStartX = 0;
+    document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    document.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) { dx < 0 ? nextSlide() : prevSlide(); }
+    }, { passive: true });
+
     window.addEventListener('resize', scale);
     scale();
   </script>
