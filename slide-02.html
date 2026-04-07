@@ -6,22 +6,23 @@
   <title>Turbo — Q1 2026: Executive Summary</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       width: 1280px;
       height: 720px;
       overflow: hidden;
-      background: #fafafa;
-      font-family: 'Instrument Sans', sans-serif;
+      background: #0d0d1a;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
     }
     .slide {
       width: 1280px;
       height: 720px;
-      background: #fafafa;
+      background: #0d0d1a;
       position: relative;
-      padding: 64px 80px;
+      padding: 52px 72px;
       display: flex;
       flex-direction: column;
     }
@@ -29,79 +30,78 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 52px;
+      margin-bottom: 40px;
     }
     .section-label {
       font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: rgba(17,17,17,0.35);
+      color: rgba(255,255,255,0.45);
     }
-    .slide-num {
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(17,17,17,0.2);
-      letter-spacing: 0.12em;
+    .wordmark {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #7c5af6;
     }
     .headline {
       font-size: 48px;
       font-weight: 700;
-      color: #111;
+      color: #fff;
       letter-spacing: -0.025em;
       line-height: 1;
-      margin-bottom: 52px;
+      margin-bottom: 40px;
     }
     .headline span {
-      color: #5200FF;
+      color: #7c5af6;
     }
     .kpi-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
+      gap: 16px;
       flex: 1;
     }
     .kpi-card {
-      background: #fff;
-      border: 1px solid #ece9ff;
-      padding: 32px 28px;
+      background: #1e1e3a;
+      border: 1px solid rgba(124,90,246,0.2);
+      padding: 28px 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     .kpi-card:first-child {
-      border-left: 3px solid #5200FF;
+      border-left: 3px solid #7c5af6;
     }
     .kpi-label {
       font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: rgba(17,17,17,0.4);
-      margin-bottom: 20px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 16px;
     }
     .kpi-value {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
       font-size: 52px;
+      font-weight: 700;
       line-height: 0.9;
-      color: #111;
+      color: #f59e0b;
       letter-spacing: -0.02em;
     }
     .kpi-delta {
       margin-top: 12px;
       font-size: 12px;
       font-weight: 600;
-      color: #16a34a;
+      color: #22c55e;
       letter-spacing: 0.04em;
     }
     .kpi-delta.flat {
-      color: rgba(17,17,17,0.4);
+      color: rgba(255,255,255,0.4);
     }
     .kpi-sub {
       margin-top: 4px;
       font-size: 11px;
-      color: rgba(17,17,17,0.4);
+      color: rgba(255,255,255,0.35);
     }
   </style>
 </head>
@@ -109,7 +109,7 @@
   <div class="slide">
     <div class="slide-header">
       <div class="section-label">Executive Summary</div>
-      <div class="slide-num">02 / 12</div>
+      <div class="wordmark">TURBO.</div>
     </div>
 
     <div class="headline">Q1 was our strongest quarter <span>yet.</span></div>

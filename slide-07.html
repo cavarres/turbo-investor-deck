@@ -6,152 +6,41 @@
   <title>Turbo — Q1 2026: Unit Economics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      width: 1280px;
-      height: 720px;
-      overflow: hidden;
-      background: #fafafa;
-      font-family: 'Instrument Sans', sans-serif;
+      width: 1280px; height: 720px; overflow: hidden;
+      background: #0d0d1a; font-family: 'Inter', system-ui, sans-serif; color: #fff;
     }
-    .slide {
-      width: 1280px;
-      height: 720px;
-      display: grid;
-      grid-template-columns: 480px 1fr;
-    }
+    .slide { width: 1280px; height: 720px; display: grid; grid-template-columns: 480px 1fr; }
     .left {
-      padding: 64px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-right: 1px solid #ece9ff;
-      background: #5200FF;
+      padding: 56px 52px; display: flex; flex-direction: column; justify-content: space-between;
+      border-right: 1px solid rgba(124,90,246,0.2); background: #1a0a3a;
     }
-    .section-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-    }
-    .big-num {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .big-label {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      margin-bottom: 12px;
-    }
-    .big-val {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
-      font-size: 100px;
-      line-height: 0.85;
-      color: #fff;
-      letter-spacing: -0.02em;
-    }
-    .big-desc {
-      margin-top: 20px;
-      font-size: 15px;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.5;
-    }
-    .slide-num {
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.3);
-      letter-spacing: 0.12em;
-    }
-    .right {
-      padding: 64px 60px;
-      display: flex;
-      flex-direction: column;
-    }
-    .right-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111;
-      letter-spacing: -0.01em;
-      margin-bottom: 36px;
-    }
-    .econ-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 0;
-      border-bottom: 1px solid #f0eeff;
-    }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .big-num { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .big-label { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+    .big-val { font-size: 100px; font-weight: 700; line-height: 0.85; color: #f59e0b; letter-spacing: -0.02em; }
+    .big-desc { margin-top: 20px; font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+    .slide-num { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.25); letter-spacing: 0.12em; }
+    .right { padding: 56px 52px; display: flex; flex-direction: column; }
+    .right-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
+    .right-title { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: -0.01em; }
+    .wordmark { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
+    .econ-row { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(124,90,246,0.15); }
     .econ-row:last-child { border-bottom: none; }
-    .econ-label {
-      font-size: 13px;
-      color: rgba(17,17,17,0.6);
-      flex: 1;
-    }
-    .econ-val {
-      font-size: 22px;
-      font-weight: 700;
-      color: #111;
-      letter-spacing: -0.02em;
-    }
-    .econ-delta {
-      font-size: 12px;
-      font-weight: 500;
-      color: #16a34a;
-      margin-left: 12px;
-    }
-    .econ-delta.neutral { color: rgba(17,17,17,0.4); }
-    .payback-bar {
-      margin-top: 32px;
-      padding: 20px 24px;
-      background: #f8f7ff;
-      border: 1px solid #ece9ff;
-      border-radius: 2px;
-    }
-    .payback-title {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(17,17,17,0.4);
-      margin-bottom: 12px;
-    }
-    .payback-track {
-      height: 8px;
-      background: #ece9ff;
-      border-radius: 4px;
-      position: relative;
-    }
-    .payback-fill {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 8px;
-      border-radius: 4px;
-      background: #5200FF;
-    }
-    .payback-labels {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 8px;
-    }
-    .payback-labels span {
-      font-size: 11px;
-      color: rgba(17,17,17,0.4);
-    }
-    .payback-labels strong {
-      font-size: 11px;
-      font-weight: 600;
-      color: #5200FF;
-    }
+    .econ-label { font-size: 13px; color: rgba(255,255,255,0.6); flex: 1; }
+    .econ-val { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+    .econ-delta { font-size: 12px; font-weight: 500; color: #22c55e; margin-left: 12px; }
+    .econ-delta.neutral { color: rgba(255,255,255,0.4); }
+    .payback-bar { margin-top: 28px; padding: 18px 22px; background: #1e1e3a; border: 1px solid rgba(124,90,246,0.2); border-radius: 2px; }
+    .payback-title { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
+    .payback-track { height: 8px; background: rgba(124,90,246,0.2); border-radius: 4px; position: relative; }
+    .payback-fill { position: absolute; left: 0; top: 0; height: 8px; border-radius: 4px; background: #7c5af6; }
+    .payback-labels { display: flex; justify-content: space-between; margin-top: 8px; }
+    .payback-labels span { font-size: 11px; color: rgba(255,255,255,0.4); }
+    .payback-labels strong { font-size: 11px; font-weight: 600; color: #7c5af6; }
   </style>
 </head>
 <body>
@@ -166,7 +55,10 @@
       <div class="slide-num">07 / 12</div>
     </div>
     <div class="right">
-      <div class="right-title">Key unit economics — Q1 2026</div>
+      <div class="right-header">
+        <div class="right-title">Key unit economics — Q1 2026</div>
+        <div class="wordmark">TURBO.</div>
+      </div>
       <div class="econ-row">
         <div class="econ-label">Average Contract Value (ACV)</div>
         <div class="econ-val">$44.7K</div>

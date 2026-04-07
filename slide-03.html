@@ -6,37 +6,38 @@
   <title>Turbo — Q1 2026: Revenue Growth</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       width: 1280px;
       height: 720px;
       overflow: hidden;
-      background: #fafafa;
-      font-family: 'Instrument Sans', sans-serif;
+      background: #0d0d1a;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
     }
     .slide {
       width: 1280px;
       height: 720px;
       position: relative;
       display: grid;
-      grid-template-columns: 420px 1fr;
+      grid-template-columns: 400px 1fr;
     }
     .left {
-      padding: 64px 56px;
+      padding: 56px 48px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border-right: 1px solid #ece9ff;
-      background: #fafafa;
+      border-right: 1px solid rgba(124,90,246,0.2);
+      background: #0d0d1a;
     }
     .section-label {
       font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: rgba(17,17,17,0.35);
+      color: rgba(255,255,255,0.45);
     }
     .big-stat {
       flex: 1;
@@ -49,41 +50,51 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(17,17,17,0.4);
+      color: rgba(255,255,255,0.45);
       margin-bottom: 16px;
     }
     .stat-value {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
       font-size: 96px;
+      font-weight: 700;
       line-height: 0.85;
-      color: #5200FF;
+      color: #f59e0b;
       letter-spacing: -0.02em;
     }
     .stat-desc {
       margin-top: 20px;
-      font-size: 15px;
-      color: rgba(17,17,17,0.55);
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
       line-height: 1.5;
       max-width: 260px;
     }
     .slide-num {
       font-size: 11px;
       font-weight: 500;
-      color: rgba(17,17,17,0.2);
+      color: rgba(255,255,255,0.2);
       letter-spacing: 0.12em;
     }
     .right {
-      padding: 64px 60px;
+      padding: 56px 52px;
       display: flex;
       flex-direction: column;
+    }
+    .right-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
     }
     .chart-title {
       font-size: 13px;
       font-weight: 600;
-      color: #111;
+      color: rgba(255,255,255,0.7);
       letter-spacing: -0.01em;
-      margin-bottom: 40px;
+    }
+    .wordmark {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #7c5af6;
     }
     .chart-area {
       flex: 1;
@@ -105,7 +116,7 @@
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      height: 340px;
+      height: 320px;
     }
     .bar {
       width: 48px;
@@ -113,10 +124,10 @@
       position: relative;
     }
     .bar.past {
-      background: #ece9ff;
+      background: rgba(124,90,246,0.3);
     }
     .bar.current {
-      background: #5200FF;
+      background: #7c5af6;
     }
     .bar-val {
       position: absolute;
@@ -125,28 +136,28 @@
       transform: translateX(-50%);
       font-size: 11px;
       font-weight: 600;
-      color: #111;
+      color: rgba(255,255,255,0.6);
       white-space: nowrap;
     }
     .bar-qtr {
       font-size: 11px;
       font-weight: 500;
-      color: rgba(17,17,17,0.4);
+      color: rgba(255,255,255,0.4);
       letter-spacing: 0.08em;
     }
     .bar.current + .bar-val,
     .bar-group:last-child .bar-val {
-      color: #5200FF;
+      color: #f59e0b;
     }
     .target-line {
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid #ece9ff;
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(124,90,246,0.2);
       font-size: 12px;
-      color: rgba(17,17,17,0.4);
+      color: rgba(255,255,255,0.4);
     }
     .target-line strong {
-      color: #111;
+      color: #fff;
     }
   </style>
 </head>
@@ -162,7 +173,10 @@
       <div class="slide-num">03 / 12</div>
     </div>
     <div class="right">
-      <div class="chart-title">Annual Recurring Revenue — Quarterly</div>
+      <div class="right-header">
+        <div class="chart-title">Annual Recurring Revenue — Quarterly</div>
+        <div class="wordmark">TURBO.</div>
+      </div>
       <div class="chart-area">
         <div class="bar-group">
           <div class="bar-wrap">
@@ -199,10 +213,10 @@
         <div class="bar-group">
           <div class="bar-wrap">
             <div class="bar current" style="height:100%">
-              <div class="bar-val" style="color:#5200FF">$2.1M</div>
+              <div class="bar-val" style="color:#f59e0b">$2.1M</div>
             </div>
           </div>
-          <div class="bar-qtr" style="color:#5200FF;font-weight:600">Q1 '26</div>
+          <div class="bar-qtr" style="color:#7c5af6;font-weight:600">Q1 '26</div>
         </div>
       </div>
       <div class="target-line">2026 target: <strong>$4M ARR</strong> &nbsp;&mdash;&nbsp; currently at 52.5% of annual goal</div>

@@ -6,128 +6,37 @@
   <title>Turbo — Q1 2026: Strategic Bets</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      width: 1280px;
-      height: 720px;
-      overflow: hidden;
-      background: #fafafa;
-      font-family: 'Instrument Sans', sans-serif;
+      width: 1280px; height: 720px; overflow: hidden;
+      background: #0d0d1a; font-family: 'Inter', system-ui, sans-serif; color: #fff;
     }
-    .slide {
-      width: 1280px;
-      height: 720px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .left {
-      padding: 64px 60px;
-      display: flex;
-      flex-direction: column;
-      border-right: 1px solid #ece9ff;
-    }
-    .right {
-      padding: 64px 60px;
-      display: flex;
-      flex-direction: column;
-    }
-    .col-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(17,17,17,0.35);
-      margin-bottom: 36px;
-    }
-    .col-title {
-      font-size: 30px;
-      font-weight: 700;
-      color: #111;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      margin-bottom: 40px;
-    }
-    .bet-list {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .bet-item {
-      display: flex;
-      gap: 20px;
-      padding: 20px 0;
-      border-bottom: 1px solid #f0eeff;
-    }
+    .slide { width: 1280px; height: 720px; display: grid; grid-template-columns: 1fr 1fr; }
+    .left { padding: 52px 56px; display: flex; flex-direction: column; border-right: 1px solid rgba(124,90,246,0.2); }
+    .right { padding: 52px 56px; display: flex; flex-direction: column; }
+    .col-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 28px; }
+    .col-title { font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 32px; }
+    .bet-list { flex: 1; display: flex; flex-direction: column; gap: 0; }
+    .bet-item { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid rgba(124,90,246,0.12); }
     .bet-item:last-child { border-bottom: none; }
-    .bet-num {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
-      font-size: 28px;
-      color: #5200FF;
-      line-height: 1;
-      min-width: 28px;
-    }
-    .bet-content {}
-    .bet-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111;
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-    .bet-desc {
-      font-size: 12px;
-      color: rgba(17,17,17,0.55);
-      line-height: 1.5;
-    }
-    .risk-list {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .risk-item {
-      padding: 16px 0;
-      border-bottom: 1px solid #f0eeff;
-    }
+    .bet-num { font-size: 26px; font-weight: 700; color: #7c5af6; line-height: 1; min-width: 26px; }
+    .bet-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 6px; letter-spacing: -0.01em; }
+    .bet-desc { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+    .risk-list { flex: 1; display: flex; flex-direction: column; gap: 0; }
+    .risk-item { padding: 14px 0; border-bottom: 1px solid rgba(124,90,246,0.12); }
     .risk-item:last-child { border-bottom: none; }
-    .risk-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 6px;
-    }
-    .risk-badge {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 2px;
-    }
-    .risk-badge.high { background: #fee2e2; color: #dc2626; }
-    .risk-badge.med { background: #fef3c7; color: #d97706; }
-    .risk-badge.low { background: #dcfce7; color: #16a34a; }
-    .risk-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: #111;
-    }
-    .risk-desc {
-      font-size: 12px;
-      color: rgba(17,17,17,0.5);
-      line-height: 1.5;
-    }
-    .slide-num {
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(17,17,17,0.2);
-      letter-spacing: 0.12em;
-      align-self: flex-end;
-    }
+    .risk-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+    .risk-badge { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; }
+    .risk-badge.high { background: rgba(239,68,68,0.2); color: #f87171; }
+    .risk-badge.med { background: rgba(245,158,11,0.2); color: #fbbf24; }
+    .risk-badge.low { background: rgba(34,197,94,0.2); color: #4ade80; }
+    .risk-title { font-size: 13px; font-weight: 600; color: #fff; }
+    .risk-desc { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+    .slide-num { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.2); letter-spacing: 0.12em; align-self: flex-end; }
+    .wordmark { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; align-self: flex-end; margin-bottom: 8px; }
+    .col-label.orange { color: #f97316; }
   </style>
 </head>
 <body>
@@ -159,7 +68,6 @@
         </div>
       </div>
     </div>
-
     <div class="right">
       <div class="col-label">Risks &amp; Mitigations</div>
       <div class="col-title">What keeps us honest</div>
