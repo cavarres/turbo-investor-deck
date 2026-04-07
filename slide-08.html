@@ -3,100 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
-  <title>Turbo — Q1 2026: Financials</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Turbo — Orchestration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1280px; height: 720px; overflow: hidden;
-      background: #0d0d1a; font-family: 'Inter', system-ui, sans-serif; color: #fff;
-    }
-    .slide { width: 1280px; height: 720px; padding: 52px 72px; display: flex; flex-direction: column; }
-    .slide-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 36px; }
-    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wordmark { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .headline { font-size: 38px; font-weight: 700; color: #fff; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 32px; }
-    .fin-table { width: 100%; border-collapse: collapse; flex: 1; }
-    .fin-table th {
-      font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-      color: rgba(255,255,255,0.4); text-align: right; padding: 0 0 14px;
-      border-bottom: 1px solid rgba(124,90,246,0.3);
-    }
-    .fin-table th:first-child { text-align: left; }
-    .fin-table td { font-size: 14px; color: rgba(255,255,255,0.65); text-align: right; padding: 13px 0; border-bottom: 1px solid rgba(124,90,246,0.1); }
-    .fin-table td:first-child { text-align: left; color: rgba(255,255,255,0.6); }
-    .fin-table tr.total td { font-weight: 700; color: #fff; border-top: 1px solid rgba(124,90,246,0.3); border-bottom: 2px solid rgba(124,90,246,0.3); padding-top: 14px; }
-    .fin-table tr.positive td:last-child { color: #22c55e; font-weight: 600; }
-    .fin-table tr.highlight td { background: rgba(124,90,246,0.12); color: #a78bfa; font-weight: 700; }
-    .fin-table tr.highlight td:first-child { color: #a78bfa; padding-left: 12px; }
-    .note { margin-top: 16px; font-size: 11px; color: rgba(255,255,255,0.3); }
+    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
+    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
+    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .sec { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); max-width: 700px; }
+    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
+    .title { font-size: 44px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 20px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 12px; }
+    .stat { background: #1a1a38; padding: 24px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.07); }
+    .sv { font-size: 52px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .sv-a { color: #7c5af6; }
+    .sv-h { color: #e8a020; }
+    .sv-w { color: #60a5fa; }
+    .sl { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; }
+    .caption { font-size: 14px; color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 16px; }
+    .cascade { background: #1a1048; border: 1px solid rgba(124,90,246,0.3); padding: 18px 24px; margin-bottom: 16px; }
+    .ct { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+    .cf { font-size: 13px; color: #7c5af6; line-height: 1.6; }
+    .bottom { font-size: 18px; font-weight: 700; color: #fff; text-align: center; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="slide-header">
-      <div class="section-label">Financials</div>
-      <div class="wordmark">TURBO.</div>
+    <div class="hdr"><div class="sec">Story 2: Agentic Middle Management&mdash; The Hand's Origin</div><div class="wm">TURBO.</div></div>
+    <div class="title">Next: Orchestration of agentic teams</div>
+    <div class="stats">
+      <div class="stat"><div class="sv sv-a">~4%</div><div class="sl">Agent Work Time</div></div>
+      <div class="stat"><div class="sv sv-h">~16%</div><div class="sl">Human Work Time</div></div>
+      <div class="stat"><div class="sv sv-w">~80%</div><div class="sl">Waiting</div></div>
     </div>
-    <div class="headline">First quarter of positive operating cash flow.</div>
-    <table class="fin-table">
-      <thead>
-        <tr>
-          <th style="width:40%">P&amp;L Summary (USD)</th>
-          <th>Q3 2025</th>
-          <th>Q4 2025</th>
-          <th>Q1 2026</th>
-          <th>QoQ Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Revenue</td>
-          <td>$340K</td>
-          <td>$380K</td>
-          <td>$525K</td>
-          <td style="color:#22c55e;font-weight:600">+38%</td>
-        </tr>
-        <tr>
-          <td>Cost of Revenue</td>
-          <td>($122K)</td>
-          <td>($125K)</td>
-          <td>($152K)</td>
-          <td style="color:rgba(255,255,255,0.4)">+22%</td>
-        </tr>
-        <tr class="total">
-          <td>Gross Profit</td>
-          <td>$218K</td>
-          <td>$255K</td>
-          <td>$373K</td>
-          <td style="color:#22c55e">+46%</td>
-        </tr>
-        <tr>
-          <td style="padding-left:16px;color:rgba(255,255,255,0.35);font-size:12px">Gross Margin</td>
-          <td style="color:rgba(255,255,255,0.35);font-size:12px">64%</td>
-          <td style="color:rgba(255,255,255,0.35);font-size:12px">67%</td>
-          <td style="color:rgba(255,255,255,0.35);font-size:12px">71%</td>
-          <td style="color:#22c55e;font-size:12px">+4 pts</td>
-        </tr>
-        <tr>
-          <td>Operating Expenses</td>
-          <td>($298K)</td>
-          <td>($310K)</td>
-          <td>($345K)</td>
-          <td style="color:rgba(255,255,255,0.4)">+11%</td>
-        </tr>
-        <tr class="highlight">
-          <td>Operating Income</td>
-          <td style="color:rgba(255,255,255,0.4);background:none;font-weight:400">($80K)</td>
-          <td style="color:rgba(255,255,255,0.4);background:none;font-weight:400">($55K)</td>
-          <td>+$28K</td>
-          <td style="color:#22c55e">First profit</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="note">Figures are unaudited. Q1 2026 closes March 31, 2026. Cash on hand: $1.84M.</div>
+    <div class="caption">75% of decisions take &lt;5 minutes = highly automatable</div>
+    <div class="cascade">
+      <div class="ct">Decision Cascade</div>
+      <div class="cf">Can the model solve it? &rarr; Has Gio solved it for this team before? (RAG pipeline) &rarr; Escalate to The Hand (Agentic Management Layer) &rarr; Escalate to Forward Deployed Squad &rarr; Add to hive mind database</div>
+    </div>
+    <div class="bottom">&ldquo;Result: Our output in 30 minutes just 100x&rsquo;d and self-improves&rdquo;</div>
   </div>
 </body>
 </html>

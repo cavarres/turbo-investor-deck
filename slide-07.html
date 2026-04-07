@@ -3,98 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
-  <title>Turbo — Q1 2026: Unit Economics</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Turbo — Agentic Engineering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1280px; height: 720px; overflow: hidden;
-      background: #0d0d1a; font-family: 'Inter', system-ui, sans-serif; color: #fff;
-    }
-    .slide { width: 1280px; height: 720px; display: grid; grid-template-columns: 480px 1fr; }
-    .left {
-      padding: 56px 52px; display: flex; flex-direction: column; justify-content: space-between;
-      border-right: 1px solid rgba(124,90,246,0.2); background: #1a0a3a;
-    }
-    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
-    .big-num { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .big-label { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
-    .big-val { font-size: 100px; font-weight: 700; line-height: 0.85; color: #f59e0b; letter-spacing: -0.02em; }
-    .big-desc { margin-top: 20px; font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.5; }
-    .slide-num { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.25); letter-spacing: 0.12em; }
-    .right { padding: 56px 52px; display: flex; flex-direction: column; }
-    .right-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
-    .right-title { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: -0.01em; }
-    .wordmark { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .econ-row { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(124,90,246,0.15); }
-    .econ-row:last-child { border-bottom: none; }
-    .econ-label { font-size: 13px; color: rgba(255,255,255,0.6); flex: 1; }
-    .econ-val { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
-    .econ-delta { font-size: 12px; font-weight: 500; color: #22c55e; margin-left: 12px; }
-    .econ-delta.neutral { color: rgba(255,255,255,0.4); }
-    .payback-bar { margin-top: 28px; padding: 18px 22px; background: #1e1e3a; border: 1px solid rgba(124,90,246,0.2); border-radius: 2px; }
-    .payback-title { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
-    .payback-track { height: 8px; background: rgba(124,90,246,0.2); border-radius: 4px; position: relative; }
-    .payback-fill { position: absolute; left: 0; top: 0; height: 8px; border-radius: 4px; background: #7c5af6; }
-    .payback-labels { display: flex; justify-content: space-between; margin-top: 8px; }
-    .payback-labels span { font-size: 11px; color: rgba(255,255,255,0.4); }
-    .payback-labels strong { font-size: 11px; font-weight: 600; color: #7c5af6; }
+    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
+    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
+    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .sec { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); max-width: 700px; }
+    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
+    .title { font-size: 44px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 24px; }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+    .box { padding: 28px 32px; }
+    .box-turbo { background: #1a1048; border: 1px solid rgba(124,90,246,0.5); }
+    .box-client { background: #1e1e1e; border: 1px solid rgba(255,255,255,0.1); }
+    .box-title { font-size: 18px; font-weight: 600; margin-bottom: 16px; }
+    .turbo-title { color: #7c5af6; }
+    .client-title { color: rgba(255,255,255,0.5); }
+    .pct { font-size: 72px; font-weight: 700; line-height: 1; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .turbo-pct { color: #fff; }
+    .client-pct { color: rgba(255,255,255,0.35); }
+    .detail { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.8; }
+    .turbo-detail { color: rgba(255,255,255,0.75); }
+    .green { color: #22c55e; font-weight: 600; }
+    .callouts { display: flex; flex-direction: column; gap: 6px; }
+    .callout { font-size: 14px; font-weight: 600; color: #7c5af6; text-align: center; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="left">
-      <div class="section-label">Unit Economics</div>
-      <div class="big-num">
-        <div class="big-label">LTV:CAC Ratio</div>
-        <div class="big-val">6.8×</div>
-        <div class="big-desc">Healthy. Industry benchmark for SaaS is 3×. We're more than 2× above it.</div>
+    <div class="hdr"><div class="sec">Story 1: Turbo's Gio versus Claude Code&mdash; speed of development</div><div class="wm">TURBO.</div></div>
+    <div class="title">Turbo Agentic Engineering &gt; Vibecoding</div>
+    <div class="comparison">
+      <div class="box box-turbo">
+        <div class="box-title turbo-title">Turbo &nbsp;(2 contributors)</div>
+        <div class="pct turbo-pct">74%</div>
+        <div class="detail turbo-detail">of all code delivered<br>86,642 line changes<br>280 commits<br><span class="green">~30 min/day per seat</span></div>
       </div>
-      <div class="slide-num">07 / 12</div>
+      <div class="box box-client">
+        <div class="box-title client-title">Client Team &nbsp;(6 devs)</div>
+        <div class="pct client-pct">26%</div>
+        <div class="detail">of all code delivered<br><br>8 hours/day</div>
+      </div>
     </div>
-    <div class="right">
-      <div class="right-header">
-        <div class="right-title">Key unit economics — Q1 2026</div>
-        <div class="wordmark">TURBO.</div>
-      </div>
-      <div class="econ-row">
-        <div class="econ-label">Average Contract Value (ACV)</div>
-        <div class="econ-val">$44.7K</div>
-        <div class="econ-delta">+22% YoY</div>
-      </div>
-      <div class="econ-row">
-        <div class="econ-label">Customer Acquisition Cost (CAC)</div>
-        <div class="econ-val">$8,200</div>
-        <div class="econ-delta">-18% QoQ</div>
-      </div>
-      <div class="econ-row">
-        <div class="econ-label">Gross Margin</div>
-        <div class="econ-val">71%</div>
-        <div class="econ-delta">+4 pts QoQ</div>
-      </div>
-      <div class="econ-row">
-        <div class="econ-label">Avg Customer Lifetime (est.)</div>
-        <div class="econ-val">38 mo</div>
-        <div class="econ-delta neutral">Stable</div>
-      </div>
-      <div class="econ-row">
-        <div class="econ-label">LTV (Gross Margin adjusted)</div>
-        <div class="econ-val">$55.9K</div>
-        <div class="econ-delta">+31% YoY</div>
-      </div>
-      <div class="payback-bar">
-        <div class="payback-title">CAC Payback Period</div>
-        <div class="payback-track">
-          <div class="payback-fill" style="width:37%"></div>
-        </div>
-        <div class="payback-labels">
-          <span>0 mo</span>
-          <strong>6.1 mo payback</strong>
-          <span>24 mo</span>
-        </div>
-      </div>
+    <div class="callouts">
+      <div class="callout">Each Turbo seat delivers in 30 minutes 10x what traditional developers deliver in a full workday.</div>
+      <div class="callout">Fully tested &mdash; On Brownfield codebase&mdash; against In-house devs using Claude</div>
+      <div class="callout">This is ... <u>before our latest automation</u></div>
     </div>
   </div>
 </body>

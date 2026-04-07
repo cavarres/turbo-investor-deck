@@ -3,107 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
-  <title>Turbo — Q1 2026: Strategic Bets</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Turbo — The Flywheel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1280px; height: 720px; overflow: hidden;
-      background: #0d0d1a; font-family: 'Inter', system-ui, sans-serif; color: #fff;
-    }
-    .slide { width: 1280px; height: 720px; display: grid; grid-template-columns: 1fr 1fr; }
-    .left { padding: 52px 56px; display: flex; flex-direction: column; border-right: 1px solid rgba(124,90,246,0.2); }
-    .right { padding: 52px 56px; display: flex; flex-direction: column; }
-    .col-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 28px; }
-    .col-title { font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 32px; }
-    .bet-list { flex: 1; display: flex; flex-direction: column; gap: 0; }
-    .bet-item { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid rgba(124,90,246,0.12); }
-    .bet-item:last-child { border-bottom: none; }
-    .bet-num { font-size: 26px; font-weight: 700; color: #7c5af6; line-height: 1; min-width: 26px; }
-    .bet-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 6px; letter-spacing: -0.01em; }
-    .bet-desc { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; }
-    .risk-list { flex: 1; display: flex; flex-direction: column; gap: 0; }
-    .risk-item { padding: 14px 0; border-bottom: 1px solid rgba(124,90,246,0.12); }
-    .risk-item:last-child { border-bottom: none; }
-    .risk-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-    .risk-badge { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; }
-    .risk-badge.high { background: rgba(239,68,68,0.2); color: #f87171; }
-    .risk-badge.med { background: rgba(245,158,11,0.2); color: #fbbf24; }
-    .risk-badge.low { background: rgba(34,197,94,0.2); color: #4ade80; }
-    .risk-title { font-size: 13px; font-weight: 600; color: #fff; }
-    .risk-desc { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; }
-    .slide-num { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.2); letter-spacing: 0.12em; align-self: flex-end; }
-    .wordmark { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; align-self: flex-end; margin-bottom: 8px; }
-    .col-label.orange { color: #f97316; }
+    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
+    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
+    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .sec { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
+    .title { font-size: 44px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 24px; }
+    .story { background: #1a1a38; padding: 32px 36px; margin-bottom: 24px; flex: 1; }
+    .st { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.9); margin-bottom: 12px; }
+    .silence { color: rgba(255,255,255,0.45); font-style: italic; margin-bottom: 12px; font-size: 15px; }
+    .gio-label { color: #7c5af6; font-weight: 700; font-size: 15px; margin-bottom: 8px; }
+    .gio-items { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.9); padding-left: 4px; }
+    .punch { font-size: 15px; font-style: italic; font-weight: 600; color: rgba(255,255,255,0.85); margin-top: 14px; text-decoration: underline; }
+    .bottom { font-size: 17px; font-weight: 600; color: #7c5af6; font-style: italic; text-align: center; }
+    .bottom span { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="left">
-      <div class="col-label">Strategic Bets — Q2 2026</div>
-      <div class="col-title">Three things we're doubling down on</div>
-      <div class="bet-list">
-        <div class="bet-item">
-          <div class="bet-num">1</div>
-          <div class="bet-content">
-            <div class="bet-title">Outcome-based pricing</div>
-            <div class="bet-desc">Shift top 10 clients to outcome SLAs by end of Q2. Expected ACV lift of 30-40%.</div>
-          </div>
-        </div>
-        <div class="bet-item">
-          <div class="bet-num">2</div>
-          <div class="bet-content">
-            <div class="bet-title">Mano Derecha as a product</div>
-            <div class="bet-desc">Package the AI right-hand platform as a standalone SKU. Target founder and exec buyers at $1.5K/mo.</div>
-          </div>
-        </div>
-        <div class="bet-item">
-          <div class="bet-num">3</div>
-          <div class="bet-content">
-            <div class="bet-title">LatAm expansion</div>
-            <div class="bet-desc">Open São Paulo office in Q3. Pipeline of 22 prospects in Brazil and Mexico already warm.</div>
-          </div>
-        </div>
+    <div class="hdr"><div class="sec">Story 3: McKinsey-level Insights</div><div class="wm">TURBO.</div></div>
+    <div class="title">The Flywheel - Insights to implementation</div>
+    <div class="story">
+      <div class="st">SBC had 15% churn.</div>
+      <div class="st">Their CEO asked a 20-person team how to get to 1%.</div>
+      <div class="silence">Silence.</div>
+      <div class="gio-label">Gio answered:</div>
+      <div class="gio-items">
+        &bull; 60% marketing misalignment - marketing<br>
+        &bull; 20% delivery too fast - business model<br>
+        &bull; 20% onboarding churn = <u><em>product development priorities</em></u>
       </div>
+      <div class="punch">That&rsquo;s a 20-person company. Now imagine 2,000. You&rsquo;d hire McKinsey. Not anymore.</div>
     </div>
-    <div class="right">
-      <div class="wordmark">TURBO.</div>
-      <div class="col-label orange">Red Team — Risks &amp; Mitigations</div>
-      <div class="col-title">What keeps us honest</div>
-      <div class="risk-list">
-        <div class="risk-item">
-          <div class="risk-header">
-            <div class="risk-badge high">High</div>
-            <div class="risk-title">AI model cost volatility</div>
-          </div>
-          <div class="risk-desc">Mitigation: multi-provider strategy + model routing layer to optimize cost per token.</div>
-        </div>
-        <div class="risk-item">
-          <div class="risk-header">
-            <div class="risk-badge med">Med</div>
-            <div class="risk-title">Client concentration</div>
-          </div>
-          <div class="risk-desc">Top 3 clients = 28% of ARR. Diversifying — no single client above 12%.</div>
-        </div>
-        <div class="risk-item">
-          <div class="risk-header">
-            <div class="risk-badge med">Med</div>
-            <div class="risk-title">PM hiring bottleneck</div>
-          </div>
-          <div class="risk-desc">Growth limited by senior PM supply. Building internal PM academy for Q3 launch.</div>
-        </div>
-        <div class="risk-item">
-          <div class="risk-header">
-            <div class="risk-badge low">Low</div>
-            <div class="risk-title">Competitive displacement</div>
-          </div>
-          <div class="risk-desc">No direct comps at our delivery quality. Incumbents (agencies) too slow to retool.</div>
-        </div>
-      </div>
-      <div class="slide-num">09 / 12</div>
-    </div>
+    <div class="bottom"><span>&ldquo;These insights feed the flywheel. This cycle becomes the company&rsquo;s operating system.&rdquo;</span></div>
   </div>
 </body>
 </html>
