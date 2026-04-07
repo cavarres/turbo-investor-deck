@@ -3,215 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
-  <title>Turbo — Q1 2026: Client Growth</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <title>Turbo — Pipeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1280px;
-      height: 720px;
-      overflow: hidden;
-      background: #fafafa;
-      font-family: 'Instrument Sans', sans-serif;
-    }
-    .slide {
-      width: 1280px;
-      height: 720px;
-      padding: 64px 80px;
-      display: flex;
-      flex-direction: column;
-    }
-    .slide-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 48px;
-    }
-    .section-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(17,17,17,0.35);
-    }
-    .slide-num {
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(17,17,17,0.2);
-      letter-spacing: 0.12em;
-    }
-    .headline {
-      font-size: 40px;
-      font-weight: 700;
-      color: #111;
-      letter-spacing: -0.025em;
-      line-height: 1.1;
-      margin-bottom: 48px;
-    }
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      flex: 1;
-    }
-    .panel {
-      background: #fff;
-      border: 1px solid #ece9ff;
-      padding: 32px 36px;
-      display: flex;
-      flex-direction: column;
-    }
-    .panel-title {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(17,17,17,0.4);
-      margin-bottom: 24px;
-    }
-    .funnel-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      border-bottom: 1px solid #ece9ff;
-    }
-    .funnel-row:last-child { border-bottom: none; }
-    .funnel-label {
-      font-size: 13px;
-      color: rgba(17,17,17,0.6);
-    }
-    .funnel-count {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
-      font-size: 28px;
-      color: #111;
-    }
-    .funnel-bar-wrap {
-      flex: 1;
-      margin: 0 20px;
-      height: 6px;
-      background: #ece9ff;
-      border-radius: 3px;
-    }
-    .funnel-bar {
-      height: 6px;
-      border-radius: 3px;
-      background: #5200FF;
-    }
-    .segment-list {
-      flex: 1;
-    }
-    .segment-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid #ece9ff;
-    }
-    .segment-row:last-child { border-bottom: none; }
-    .seg-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-right: 12px;
-    }
-    .seg-name {
-      font-size: 13px;
-      color: rgba(17,17,17,0.7);
-      flex: 1;
-    }
-    .seg-pct {
-      font-size: 13px;
-      font-weight: 600;
-      color: #111;
-    }
-    .seg-count {
-      font-size: 12px;
-      color: rgba(17,17,17,0.4);
-      margin-left: 16px;
-      min-width: 40px;
-      text-align: right;
-    }
+    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
+    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
+    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
+    .title { font-size: 48px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 4px; }
+    .subtitle { font-size: 20px; font-weight: 600; color: #7c5af6; margin-bottom: 20px; }
+    table { width: 730px; border-collapse: collapse; margin-bottom: 20px; }
+    th { font-size: 13px; font-weight: 600; color: #7c5af6; padding: 10px 16px; text-align: left; border: 1px solid rgba(124,90,246,0.4); background: rgba(124,90,246,0.12); }
+    td { font-size: 14px; padding: 10px 16px; border: 1px solid rgba(255,255,255,0.1); color: #fff; }
+    tr:last-child td { font-weight: 600; background: rgba(124,90,246,0.07); }
+    .g { color: #22c55e; font-weight: 500; }
+    .y { color: #e8a020; font-weight: 500; }
+    .callout { background: #1a1048; border: 1px solid rgba(124,90,246,0.4); padding: 18px 24px; max-width: 730px; }
+    .ct { font-size: 14px; font-weight: 600; color: #7c5af6; line-height: 1.8; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="slide-header">
-      <div class="section-label">Client Growth</div>
-      <div class="slide-num">04 / 12</div>
-    </div>
-
-    <div class="headline">47 active clients. 12 net new in Q1.</div>
-
-    <div class="content-grid">
-      <div class="panel">
-        <div class="panel-title">Pipeline — End of Q1 2026</div>
-        <div class="funnel-row">
-          <div class="funnel-label">Leads</div>
-          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%"></div></div>
-          <div class="funnel-count">184</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Qualified</div>
-          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:52%"></div></div>
-          <div class="funnel-count">96</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Proposals</div>
-          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:28%"></div></div>
-          <div class="funnel-count">51</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Closed Won (Q1)</div>
-          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:13%"></div></div>
-          <div class="funnel-count" style="color:#5200FF">24</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Net New Clients</div>
-          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:6.5%"></div></div>
-          <div class="funnel-count" style="color:#5200FF">12</div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-title">Client Mix by Segment</div>
-        <div class="segment-list">
-          <div class="segment-row">
-            <div class="seg-dot" style="background:#5200FF"></div>
-            <div class="seg-name">EdTech platforms</div>
-            <div class="seg-pct">34%</div>
-            <div class="seg-count">16 clients</div>
-          </div>
-          <div class="segment-row">
-            <div class="seg-dot" style="background:#5200FF"></div>
-            <div class="seg-name">B2B SaaS</div>
-            <div class="seg-pct">26%</div>
-            <div class="seg-count">12 clients</div>
-          </div>
-          <div class="segment-row">
-            <div class="seg-dot" style="background:#FF009D"></div>
-            <div class="seg-name">D2C e-commerce</div>
-            <div class="seg-pct">19%</div>
-            <div class="seg-count">9 clients</div>
-          </div>
-          <div class="segment-row">
-            <div class="seg-dot" style="background:#AAFE05"></div>
-            <div class="seg-name">FinTech</div>
-            <div class="seg-pct">13%</div>
-            <div class="seg-count">6 clients</div>
-          </div>
-          <div class="segment-row">
-            <div class="seg-dot" style="background:#ece9ff"></div>
-            <div class="seg-name">Other</div>
-            <div class="seg-pct">8%</div>
-            <div class="seg-count">4 clients</div>
-          </div>
-        </div>
-      </div>
+    <div class="hdr"><div class="sec">Pipeline</div><div class="wm">TURBO.</div></div>
+    <div class="title">Pipeline Entering Q2</div>
+    <div class="subtitle">$77,500/mo &nbsp;($930K annualized)</div>
+    <table>
+      <thead><tr><th>Client</th><th>Monthly Value</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Internal Scaling (Net Rev Growth)</td><td>$22,500</td><td class="g">Confirmed 01 April &amp; May</td></tr>
+        <tr><td>Continuum</td><td>$9,500</td><td class="g">Confirmed 6 April</td></tr>
+        <tr><td>FlipZen</td><td>$8,000</td><td class="y">Kickoff 13 April</td></tr>
+        <tr><td>Access Point</td><td>$7,500</td><td class="g">Confirmed 27 April</td></tr>
+        <tr><td>Arctic Slope (ASRC)</td><td>$30,000+</td><td class="y">May</td></tr>
+        <tr><td>Total</td><td>$77,500/mo pipeline<br>*next 2 months*</td><td></td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <div class="ct">Historical Pipeline conversion rate= 100%<br>Upon conversion (assuming no churn): &nbsp;$1.87M run rate (from $0 beginning of Q4)</div>
     </div>
   </div>
 </body>
