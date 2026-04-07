@@ -3,50 +3,215 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
-  <title>Turbo — Pipeline</title>
-  <link rel="stylesheet" href="theme.css" />
+  <title>Turbo — Q1 2026: Client Growth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
-    .slide { padding: 60px 80px; display: flex; flex-direction: column; }
-    .slide-header { margin-bottom: 8px; }
-    .headline { font-family: var(--font-serif); font-weight: 700; font-size: 48px; line-height: 1; color: var(--text); letter-spacing: -0.025em; margin-bottom: 4px; }
-    .subhead   { font-family: var(--font-serif); font-style: italic; font-size: 22px; color: var(--primary); margin-bottom: 22px; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 18px; }
-    th { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); padding: 10px 16px; text-align: left; border-bottom: 2px solid var(--border); }
-    td { font-size: 14px; padding: 12px 16px; border-bottom: 1px solid var(--border-soft); color: var(--text); }
-    tr:last-child td { border-bottom: none; font-weight: 600; background: var(--primary-light); }
-    .g { color: var(--green); font-weight: 500; }
-    .y { color: var(--amber); font-weight: 500; }
-    .val { font-family: var(--font-serif); font-style: italic; font-size: 18px; color: var(--text); }
-    .callout { background: var(--surface); border: 1px solid var(--border-soft); border-left: 3px solid var(--primary); padding: 16px 24px; display: flex; gap: 32px; align-items: center; }
-    .callout-stat { text-align: center; }
-    .cs-val { font-family: var(--font-serif); font-style: italic; font-size: 32px; color: var(--primary); }
-    .cs-lbl { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-    .callout-text { font-size: 13px; color: var(--text-muted); line-height: 1.6; flex: 1; }
-    .callout-text strong { color: var(--text); }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      padding: 64px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.35);
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(17,17,17,0.2);
+      letter-spacing: 0.12em;
+    }
+    .headline {
+      font-size: 40px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 48px;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      flex: 1;
+    }
+    .panel {
+      background: #fff;
+      border: 1px solid #ece9ff;
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+    .panel-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.4);
+      margin-bottom: 24px;
+    }
+    .funnel-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid #ece9ff;
+    }
+    .funnel-row:last-child { border-bottom: none; }
+    .funnel-label {
+      font-size: 13px;
+      color: rgba(17,17,17,0.6);
+    }
+    .funnel-count {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 28px;
+      color: #111;
+    }
+    .funnel-bar-wrap {
+      flex: 1;
+      margin: 0 20px;
+      height: 6px;
+      background: #ece9ff;
+      border-radius: 3px;
+    }
+    .funnel-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: #5200FF;
+    }
+    .segment-list {
+      flex: 1;
+    }
+    .segment-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #ece9ff;
+    }
+    .segment-row:last-child { border-bottom: none; }
+    .seg-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    .seg-name {
+      font-size: 13px;
+      color: rgba(17,17,17,0.7);
+      flex: 1;
+    }
+    .seg-pct {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+    }
+    .seg-count {
+      font-size: 12px;
+      color: rgba(17,17,17,0.4);
+      margin-left: 16px;
+      min-width: 40px;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
   <div class="slide">
     <div class="slide-header">
-      <div class="section-label">Pipeline</div>
+      <div class="section-label">Client Growth</div>
       <div class="slide-num">04 / 12</div>
     </div>
-    <div class="headline">Pipeline Entering Q2</div>
-    <div class="subhead">$77,500 / mo &nbsp;&mdash;&nbsp; $930K annualized</div>
-    <table>
-      <thead><tr><th>Client</th><th>Monthly Value</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr><td>Internal Scaling (Net Rev Growth)</td><td class="val">$22,500</td><td class="g">Confirmed 01 April &amp; May</td></tr>
-        <tr><td>Continuum</td><td class="val">$9,500</td><td class="g">Confirmed 6 April</td></tr>
-        <tr><td>FlipZen</td><td class="val">$8,000</td><td class="y">Kickoff 13 April</td></tr>
-        <tr><td>Access Point</td><td class="val">$7,500</td><td class="g">Confirmed 27 April</td></tr>
-        <tr><td>Arctic Slope (ASRC)</td><td class="val">$30,000+</td><td class="y">May</td></tr>
-        <tr><td>Total &nbsp;— next 2 months</td><td class="val">$77,500 / mo</td><td></td></tr>
-      </tbody>
-    </table>
-    <div class="callout">
-      <div class="callout-stat"><div class="cs-val">100%</div><div class="cs-lbl">historical conversion</div></div>
-      <div class="callout-text"><strong>Upon conversion (assuming no churn):</strong> $1.87M run rate &mdash; up from $0 at the beginning of Q4.</div>
+
+    <div class="headline">47 active clients. 12 net new in Q1.</div>
+
+    <div class="content-grid">
+      <div class="panel">
+        <div class="panel-title">Pipeline — End of Q1 2026</div>
+        <div class="funnel-row">
+          <div class="funnel-label">Leads</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%"></div></div>
+          <div class="funnel-count">184</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Qualified</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:52%"></div></div>
+          <div class="funnel-count">96</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Proposals</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:28%"></div></div>
+          <div class="funnel-count">51</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Closed Won (Q1)</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:13%"></div></div>
+          <div class="funnel-count" style="color:#5200FF">24</div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Net New Clients</div>
+          <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:6.5%"></div></div>
+          <div class="funnel-count" style="color:#5200FF">12</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Client Mix by Segment</div>
+        <div class="segment-list">
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#5200FF"></div>
+            <div class="seg-name">EdTech platforms</div>
+            <div class="seg-pct">34%</div>
+            <div class="seg-count">16 clients</div>
+          </div>
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#5200FF"></div>
+            <div class="seg-name">B2B SaaS</div>
+            <div class="seg-pct">26%</div>
+            <div class="seg-count">12 clients</div>
+          </div>
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#FF009D"></div>
+            <div class="seg-name">D2C e-commerce</div>
+            <div class="seg-pct">19%</div>
+            <div class="seg-count">9 clients</div>
+          </div>
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#AAFE05"></div>
+            <div class="seg-name">FinTech</div>
+            <div class="seg-pct">13%</div>
+            <div class="seg-count">6 clients</div>
+          </div>
+          <div class="segment-row">
+            <div class="seg-dot" style="background:#ece9ff"></div>
+            <div class="seg-name">Other</div>
+            <div class="seg-pct">8%</div>
+            <div class="seg-count">4 clients</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

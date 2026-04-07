@@ -3,36 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
-  <title>Turbo — CEO Letter</title>
-  <link rel="stylesheet" href="theme.css" />
+  <title>Turbo — Q1 2026: Executive Summary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
-    .slide { display: grid; grid-template-columns: 400px 1fr; }
-    .left  { padding: 64px 52px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--border); background: var(--bg); }
-    .right { padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 18px; background: var(--surface); }
-    .pull  { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
-    .attr  { font-size: 13px; font-weight: 600; color: var(--primary); }
-    hr.divider { border: none; border-top: 1px solid var(--border); }
-    .highlight { font-size: 14px; font-weight: 600; color: var(--primary); line-height: 1.65; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: #fafafa;
+      position: relative;
+      padding: 64px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 52px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.35);
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(17,17,17,0.2);
+      letter-spacing: 0.12em;
+    }
+    .headline {
+      font-size: 48px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.025em;
+      line-height: 1;
+      margin-bottom: 52px;
+    }
+    .headline span {
+      color: #5200FF;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      flex: 1;
+    }
+    .kpi-card {
+      background: #fff;
+      border: 1px solid #ece9ff;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .kpi-card:first-child {
+      border-left: 3px solid #5200FF;
+    }
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.4);
+      margin-bottom: 20px;
+    }
+    .kpi-value {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 52px;
+      line-height: 0.9;
+      color: #111;
+      letter-spacing: -0.02em;
+    }
+    .kpi-delta {
+      margin-top: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #5200FF;
+      letter-spacing: 0.04em;
+    }
+    .kpi-delta.flat {
+      color: rgba(17,17,17,0.4);
+    }
+    .kpi-sub {
+      margin-top: 4px;
+      font-size: 11px;
+      color: rgba(17,17,17,0.4);
+    }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="left">
-      <div class="section-label">CEO Letter</div>
-      <div class="pull">
-        <div class="t-pull">&ldquo;Q1 was a quarter of 4x growth. We exceeded our $1M run rate target 2 weeks early&mdash; but simultaneously had a major technology breakthrough.&rdquo;</div>
-        <div class="attr">&mdash; Jeremy Topp, CEO &amp; Co-Founder</div>
-      </div>
+    <div class="slide-header">
+      <div class="section-label">Executive Summary</div>
       <div class="slide-num">02 / 12</div>
     </div>
-    <div class="right">
-      <div class="t-body">By mid-quarter, something became clear: our internal AI platform &mdash; the system our team uses to ship 14x more code than traditional developers &mdash; had become the competitive product. We discovered the potential to exponentially increase quality output from here.</div>
-      <hr class="divider" />
-      <div class="t-body">Turbo Squads have expanded to include both <strong>Brownfield and Greenfield</strong> code and integrate with existing product teams. This allowed us to move further upstream adding series B, SMBs, and enterprise clients to our pipeline.</div>
-      <hr class="divider" />
-      <div class="t-body">To prioritize products and large revenue opportunities, I <strong>paused two client seats</strong> and delayed two pipeline deals. Promoted our top forward deployed PM to a management role.</div>
-      <hr class="divider" />
-      <div class="highlight">Since Q4, Humans have been the interface to our product. In Q2, we will begin to share our product directly with our clients.</div>
+
+    <div class="headline">Q1 was our strongest quarter <span>yet.</span></div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">ARR</div>
+        <div>
+          <div class="kpi-value">$2.1M</div>
+          <div class="kpi-delta">+38% QoQ</div>
+          <div class="kpi-sub">vs $1.52M in Q4 2025</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Active Clients</div>
+        <div>
+          <div class="kpi-value">47</div>
+          <div class="kpi-delta">+12 net new</div>
+          <div class="kpi-sub">35 in Q4 2025</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Gross Margin</div>
+        <div>
+          <div class="kpi-value">71%</div>
+          <div class="kpi-delta">+4 pts QoQ</div>
+          <div class="kpi-sub">67% in Q4 2025</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Net Revenue Retention</div>
+        <div>
+          <div class="kpi-value">118%</div>
+          <div class="kpi-delta flat">Stable</div>
+          <div class="kpi-sub">117% in Q4 2025</div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

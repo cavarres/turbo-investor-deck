@@ -3,71 +3,219 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
-  <title>Turbo — Strategic Milestones</title>
-  <link rel="stylesheet" href="theme.css" />
+  <title>Turbo — Q1 2026: Q2 Roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
-    .slide { padding: 56px 80px; display: flex; flex-direction: column; }
-    .slide-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-
-    .headline { font-family: var(--font-serif); font-weight: 700; font-size: 48px; line-height: 1; color: var(--text); letter-spacing: -0.025em; margin-bottom: 28px; }
-
-    .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; flex: 1; }
-    .col { background: var(--surface); border: 1px solid var(--border-soft); padding: 28px 28px; display: flex; flex-direction: column; gap: 10px; }
-    .col:first-child { border-top: 3px solid var(--primary); }
-    .col:nth-child(2) { border-top: 3px solid var(--amber); }
-    .col:last-child  { border-top: 3px solid #60a5fa; }
-
-    .col-title { font-family: var(--font-serif); font-weight: 700; font-size: 20px; line-height: 1.1; margin-bottom: 6px; color: var(--text); letter-spacing: -0.015em; }
-    .col-title-primary { color: var(--primary); }
-    .col-title-amber   { color: var(--amber); }
-    .col-title-blue    { color: #2563eb; }
-
-    .sub { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
-    .items { font-size: 13px; color: rgba(26,26,26,0.7); line-height: 1.75; list-style: none; padding: 0; }
-    .items li { padding-left: 14px; position: relative; margin-bottom: 2px; }
-    .items li::before { content: "—"; position: absolute; left: 0; color: var(--text-faint2); font-size: 11px; top: 2px; }
-    .nested { margin-left: 14px; margin-top: 4px; }
-    .nested li::before { content: "·"; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #fafafa;
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      padding: 64px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.35);
+    }
+    .slide-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(17,17,17,0.2);
+      letter-spacing: 0.12em;
+    }
+    .headline {
+      font-size: 40px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 48px;
+    }
+    .headline span { color: #5200FF; }
+    .timeline {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .month-col {
+      background: #fff;
+      border: 1px solid #ece9ff;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .month-col:first-child { border-left: 3px solid #5200FF; }
+    .month-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #5200FF;
+      margin-bottom: 20px;
+    }
+    .month-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .month-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .item-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #5200FF;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .item-dot.dim { background: #ece9ff; }
+    .item-text {
+      font-size: 13px;
+      color: rgba(17,17,17,0.7);
+      line-height: 1.4;
+    }
+    .item-text strong {
+      color: #111;
+      font-weight: 600;
+    }
+    .okr-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .okr-box {
+      background: #ece9ff;
+      border: 1px solid #ece9ff;
+      padding: 16px 20px;
+    }
+    .okr-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.4);
+      margin-bottom: 6px;
+    }
+    .okr-target {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.02em;
+    }
   </style>
 </head>
 <body>
   <div class="slide">
     <div class="slide-header">
-      <div class="section-label">Strategic Milestones</div>
+      <div class="section-label">Q2 2026 Roadmap</div>
       <div class="slide-num">10 / 12</div>
     </div>
-    <div class="headline">Strategic Milestones</div>
-    <div class="cols">
-      <div class="col">
-        <div class="col-title col-title-primary">Anthropic Partner Network</div>
-        <div class="sub">Accepted March 25</div>
-        <ul class="items">
-          <li>potential 30&ndash;50% COGS reduction</li>
-          <li>Enterprise referral pipeline</li>
-          <li>Reserved for $XB Consultancies (Accenture etc) who deliver Anthropic solutions to Enterprise</li>
-        </ul>
+
+    <div class="headline">April through June: <span>execution mode.</span></div>
+
+    <div class="timeline">
+      <div class="month-col">
+        <div class="month-tag">April</div>
+        <div class="month-items">
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>Juan onboarding</strong> — takes over Teachy + 3 clients</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>Outcome SLA pilot</strong> — 3 clients on new pricing model</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>Mano Derecha beta</strong> — open to 20 founders</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>Gio v2.1</strong> — multi-repo support + test coverage gates</div>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <div class="col-title col-title-amber">Remain Capacity Constrained</div>
-        <div class="sub">Paid Waitlist through May</div>
-        <ul class="items">
-          <li>Portfolio Mix:
-            <ul class="nested items">
-              <li>25% Net Revenue Growth</li>
-              <li>25% $10M+ Revenue</li>
-              <li>50% Clients series Seed&ndash;Series B</li>
-            </ul>
-          </li>
-          <li>0% Client churn</li>
-        </ul>
+      <div class="month-col">
+        <div class="month-tag">May</div>
+        <div class="month-items">
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>SBC routines</strong> — Seoul Beauty Club full PM loop live</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>KR reviews</strong> — mid-quarter check on all team OKRs</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>5 new client closings</strong> — from April pipeline</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot dim"></div>
+            <div class="item-text" style="color:rgba(17,17,17,0.4)">São Paulo office groundwork</div>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <div class="col-title col-title-blue">Enterprise Sales Motion</div>
-        <div class="sub">Moving upstream. 1 on waitlist</div>
-        <ul class="items">
-          <li>Min. $30K/mo offer structure pilot</li>
-          <li>Q2 target: $8B U.S.-based firm</li>
-        </ul>
+      <div class="month-col">
+        <div class="month-tag">June</div>
+        <div class="month-items">
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>Outcome SLA rollout</strong> — 10 clients on new model</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot"></div>
+            <div class="item-text"><strong>Mano Derecha GA</strong> — public launch, paid tier</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot dim"></div>
+            <div class="item-text" style="color:rgba(17,17,17,0.4)">Series A prep begins</div>
+          </div>
+          <div class="month-item">
+            <div class="item-dot dim"></div>
+            <div class="item-text" style="color:rgba(17,17,17,0.4)">Q2 investor update</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="okr-row">
+      <div class="okr-box">
+        <div class="okr-label">Q2 ARR Target</div>
+        <div class="okr-target">$2.65M</div>
+      </div>
+      <div class="okr-box">
+        <div class="okr-label">New Clients Target</div>
+        <div class="okr-target">+10 net new</div>
+      </div>
+      <div class="okr-box">
+        <div class="okr-label">Gross Margin Target</div>
+        <div class="okr-target">74%</div>
       </div>
     </div>
   </div>
