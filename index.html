@@ -11,15 +11,11 @@
       background: #111;
       overflow: hidden;
     }
-    .deck-container {
-      width: 100vw; height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .slide-frame {
+    #slideFrame {
+      position: fixed;
       width: 1280px; height: 720px;
       border: none;
-      transform-origin: center center;
-      display: block;
+      transform-origin: top left;
     }
     .nav-btn {
       position: fixed; top: 50%; transform: translateY(-50%);
@@ -39,9 +35,7 @@
   </style>
 </head>
 <body>
-  <div class="deck-container">
-    <iframe id="slideFrame" class="slide-frame" src="slide-01.html"></iframe>
-  </div>
+  <iframe id="slideFrame" src="slide-01.html"></iframe>
   <button class="nav-btn nav-prev" onclick="prevSlide()">&#8592;</button>
   <button class="nav-btn nav-next" onclick="nextSlide()">&#8594;</button>
   <div class="slide-counter" id="counter">1 / 11</div>
@@ -50,8 +44,13 @@
     let current = 1;
 
     function scale() {
-      const s = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
-      document.getElementById('slideFrame').style.transform = 'scale(' + s + ')';
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const s = Math.min(w / 1280, h / 720);
+      const f = document.getElementById('slideFrame');
+      f.style.transform = 'scale(' + s + ')';
+      f.style.left = Math.round((w - 1280 * s) / 2) + 'px';
+      f.style.top  = Math.round((h - 720  * s) / 2) + 'px';
     }
 
     function show(n) {
