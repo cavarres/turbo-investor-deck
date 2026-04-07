@@ -1,55 +1,67 @@
 /* ============================================================
    TURBO INVESTOR DECK — THEME
-   Matches turbostudio.ai brand system
+   Source of truth: TurboMvp/landing design system
    ============================================================ */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=gambetta@400,400i,600,700,700i&display=swap');
 
 /* --- Design Tokens --- */
 :root {
-  --primary:     #5200FF;
-  --primary-dim: rgba(82, 0, 255, 0.08);
-  --secondary:   #FF009D;
-  --text:        #111111;
-  --text-muted:  #666666;
-  --text-faint:  rgba(17, 17, 17, 0.35);
-  --text-faint2: rgba(17, 17, 17, 0.2);
-  --bg:          #fafafa;
-  --card:        #ffffff;
-  --border:      #ece9ff;
-  --border-dim:  #f0eeff;
-  --green:       #16a34a;
-  --amber:       #d97706;
+  --primary:        #5200FF;
+  --primary-hover:  #4400D9;
+  --primary-light:  #E8E0FF;
+  --accent:         #AAFE05;
+  --accent-text:    #1A1A1A;
+
+  --bg:             #fafafa;
+  --surface:        #ffffff;
+  --border:         #E5E5E5;
+  --border-soft:    #ece9ff;
+
+  --text:           #1A1A1A;
+  --text-muted:     #737373;
+  --text-faint:     rgba(26,26,26,0.35);
+  --text-faint2:    rgba(26,26,26,0.2);
+
+  --green:          #16a34a;
+  --amber:          #d97706;
+  --red:            #FF0055;
+
+  --font-sans:      'Instrument Sans', -apple-system, sans-serif;
+  --font-serif:     'Gambetta', Georgia, serif;
 }
 
 /* --- Reset --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* --- Base --- */
 body {
   width: 1280px;
   height: 720px;
   overflow: hidden;
   background: var(--bg);
-  font-family: 'Instrument Sans', -apple-system, sans-serif;
+  font-family: var(--font-sans);
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* --- Slide wrapper --- */
+/* --- Slide shell --- */
 .slide {
   width: 1280px;
   height: 720px;
-  background: var(--bg);
   position: relative;
+  background: var(--bg);
 }
 
-/* --- Shared header (section label + slide number) --- */
+/* --- Header row --- */
 .slide-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* --- Labels & meta --- */
 .section-label {
   font-size: 11px;
   font-weight: 500;
@@ -61,57 +73,62 @@ body {
 .slide-num {
   font-size: 11px;
   font-weight: 500;
-  color: var(--text-faint2);
   letter-spacing: 0.12em;
+  color: var(--text-faint2);
 }
 
-/* --- TURBO. wordmark --- */
 .wordmark {
-  font-size: 13px;
+  font-family: var(--font-sans);
   font-weight: 700;
+  font-size: 13px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--primary);
 }
 
-/* --- Typography scale --- */
+/* --- Typography --- */
 .t-display {
-  font-family: 'Instrument Serif', serif;
+  font-family: var(--font-serif);
   font-style: italic;
+  font-weight: 700;
   color: var(--primary);
   letter-spacing: -0.02em;
-  line-height: 0.9;
+  line-height: 0.88;
 }
 
 .t-headline {
-  font-size: 48px;
+  font-family: var(--font-serif);
   font-weight: 700;
+  font-size: 52px;
   color: var(--text);
   letter-spacing: -0.025em;
   line-height: 1.05;
 }
 
-.t-title {
-  font-size: 36px;
-  font-weight: 700;
+.t-pull {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.35;
   color: var(--text);
-  letter-spacing: -0.025em;
-  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 .t-body {
   font-size: 14px;
-  font-weight: 400;
-  color: rgba(17, 17, 17, 0.75);
-  line-height: 1.65;
+  line-height: 1.7;
+  color: rgba(26,26,26,0.75);
 }
+
+.t-body strong { color: var(--text); font-weight: 600; }
 
 .t-label {
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(17, 17, 17, 0.4);
+  color: var(--text-faint);
 }
 
 .t-primary { color: var(--primary); }
@@ -119,35 +136,24 @@ body {
 .t-green   { color: var(--green); }
 .t-amber   { color: var(--amber); }
 
-.serif-italic {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-}
-
 /* --- Cards --- */
 .card {
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--border);
 }
 
-.card-inset {
+.card-soft {
   background: var(--bg);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-soft);
 }
 
-.card-primary {
-  background: var(--card);
+.card-accent {
+  background: var(--surface);
   border: 1px solid var(--border);
   border-left: 3px solid var(--primary);
 }
 
-/* --- Dividers --- */
-.divider {
-  border: none;
-  border-top: 1px solid var(--border);
-}
-
-/* --- Status chips --- */
+/* --- Chips --- */
 .chip {
   display: inline-block;
   font-size: 10px;
@@ -155,35 +161,38 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 3px 8px;
-  border-radius: 3px;
   white-space: nowrap;
 }
+.chip-primary  { background: var(--primary);       color: #fff; }
+.chip-soft     { background: var(--primary-light);  color: var(--primary); }
+.chip-accent   { background: var(--accent);         color: var(--accent-text); }
+.chip-neutral  { background: #f4f4f4;               color: var(--text-muted); }
+.chip-green    { background: #dcfce7;               color: var(--green); }
 
-.chip-primary  { background: var(--primary);      color: #fff; }
-.chip-soft     { background: var(--primary-dim);   color: var(--primary); }
-.chip-neutral  { background: #f4f4f4;              color: rgba(17,17,17,0.45); }
-.chip-green    { background: #dcfce7;              color: #15803d; }
+/* --- Divider --- */
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+}
 
-/* --- Column divider --- */
-.col-divider {
-  border-right: 1px solid var(--border);
+/* --- Dot accent --- */
+.dot-accent {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
 }
 
 /* --- Utility spacing --- */
-.mt-4  { margin-top: 4px; }
 .mt-8  { margin-top: 8px; }
 .mt-12 { margin-top: 12px; }
 .mt-16 { margin-top: 16px; }
 .mt-24 { margin-top: 24px; }
 .mt-32 { margin-top: 32px; }
 .mt-40 { margin-top: 40px; }
-.mt-48 { margin-top: 48px; }
-
-.mb-4  { margin-bottom: 4px; }
 .mb-8  { margin-bottom: 8px; }
 .mb-12 { margin-bottom: 12px; }
 .mb-16 { margin-bottom: 16px; }
 .mb-24 { margin-bottom: 24px; }
 .mb-32 { margin-bottom: 32px; }
 .mb-40 { margin-bottom: 40px; }
-.mb-48 { margin-bottom: 48px; }

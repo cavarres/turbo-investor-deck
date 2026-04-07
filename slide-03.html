@@ -4,39 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Headline Metrics</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 48px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 52px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 36px; }
-    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 44px; }
-    .card { background: #1a1a38; padding: 32px 28px; border: 1px solid rgba(124,90,246,0.15); }
-    .val { font-size: 48px; font-weight: 700; color: #7c5af6; line-height: 1; margin-bottom: 14px; letter-spacing: -0.02em; }
-    .lbl { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 8px; }
-    .sub { font-size: 12px; color: rgba(255,255,255,0.4); }
-    .bottom { display: flex; gap: 56px; align-items: baseline; }
-    .bi { display: flex; gap: 12px; align-items: baseline; }
-    .bl { font-size: 16px; color: rgba(255,255,255,0.6); }
-    .bv { font-size: 32px; font-weight: 700; color: #7c5af6; letter-spacing: -0.02em; }
+    .slide { display: grid; grid-template-columns: 380px 1fr; }
+    .left  { padding: 64px 52px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--border); }
+    .right { padding: 64px 60px; display: flex; flex-direction: column; background: var(--surface); }
+    .hero  { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .stat-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px; }
+    .stat-value { font-family: var(--font-serif); font-style: italic; font-size: 96px; line-height: 0.85; color: var(--primary); letter-spacing: -0.02em; }
+    .stat-desc  { margin-top: 16px; font-size: 14px; color: var(--text-muted); line-height: 1.5; max-width: 260px; }
+    .bottom-stats { display: flex; gap: 32px; }
+    .bs { display: flex; align-items: baseline; gap: 8px; }
+    .bs-val { font-family: var(--font-serif); font-weight: 700; font-size: 28px; color: var(--primary); }
+    .bs-lbl { font-size: 12px; color: var(--text-muted); }
+    .chart-title { font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 32px; letter-spacing: -0.01em; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; flex: 1; }
+    .kpi { background: var(--bg); border: 1px solid var(--border-soft); padding: 28px 24px; display: flex; flex-direction: column; justify-content: space-between; }
+    .kpi-lbl { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px; }
+    .kpi-val { font-family: var(--font-serif); font-style: italic; font-size: 44px; line-height: 0.9; color: var(--text); letter-spacing: -0.02em; }
+    .kpi-delta { margin-top: 10px; font-size: 12px; font-weight: 600; color: var(--green); }
+    .kpi-sub   { margin-top: 4px; font-size: 11px; color: var(--text-faint); }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Headline Metrics</div><div class="wm">TURBO.</div></div>
-    <div class="title">The Numbers</div>
-    <div class="grid">
-      <div class="card"><div class="val">$1.9M</div><div class="lbl">Pipeline Run Rate</div><div class="sub">~40% in paid pipeline</div></div>
-      <div class="card"><div class="val">$86K</div><div class="lbl">Active MRR</div><div class="sub">12 seats across 9 clients</div></div>
-      <div class="card"><div class="val">12,001</div><div class="lbl">LinkedIn Followers</div><div class="sub">240% of 5K target</div></div>
-      <div class="card"><div class="val">93.7%</div><div class="lbl">Commit Share</div><div class="sub">SBC case study</div></div>
+    <div class="left">
+      <div class="section-label">Headline Metrics</div>
+      <div class="hero">
+        <div class="stat-label">Pipeline Run Rate</div>
+        <div class="stat-value">$1.9M</div>
+        <div class="stat-desc">~40% in paid pipeline. From $0 at the beginning of Q4.</div>
+      </div>
+      <div class="bottom-stats">
+        <div class="bs"><div class="bs-val">14</div><div class="bs-lbl">team size</div></div>
+        <div class="bs"><div class="bs-val">45mo</div><div class="bs-lbl">runway</div></div>
+      </div>
+      <div class="slide-num mt-16">03 / 12</div>
     </div>
-    <div class="bottom">
-      <div class="bi"><div class="bl">Size of team:</div><div class="bv">14</div></div>
-      <div class="bi"><div class="bl">Runway:</div><div class="bv">45 months</div></div>
+    <div class="right">
+      <div class="chart-title">The Numbers</div>
+      <div class="grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Active MRR</div>
+          <div>
+            <div class="kpi-val">$86K</div>
+            <div class="kpi-delta">12 seats</div>
+            <div class="kpi-sub">across 9 clients</div>
+          </div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-lbl">LinkedIn Followers</div>
+          <div>
+            <div class="kpi-val">12,001</div>
+            <div class="kpi-delta">240% of target</div>
+            <div class="kpi-sub">5K was the goal</div>
+          </div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-lbl">Commit Share</div>
+          <div>
+            <div class="kpi-val">93.7%</div>
+            <div class="kpi-delta">SBC case study</div>
+            <div class="kpi-sub">91.4% code changes</div>
+          </div>
+        </div>
+        <div class="kpi" style="border-left: 3px solid var(--primary);">
+          <div class="kpi-lbl">Run Rate (pipeline)</div>
+          <div>
+            <div class="kpi-val">$1.87M</div>
+            <div class="kpi-delta">upon conversion</div>
+            <div class="kpi-sub">100% historical conv. rate</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

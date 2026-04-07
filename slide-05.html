@@ -4,44 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Growth &amp; Team</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #f87171; }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 48px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 24px; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
-    .card { background: #1a1a38; padding: 26px 28px; border: 1px solid rgba(255,255,255,0.07); }
-    .val { font-size: 44px; font-weight: 700; color: #e8a020; line-height: 1; margin-bottom: 12px; letter-spacing: -0.02em; }
-    .lbl { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 8px; }
-    .sub { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; }
-    .bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .bs h4 { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); text-decoration: underline; margin-bottom: 10px; }
-    .bs p { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.75; }
-    .note { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 12px; font-style: italic; }
+    .slide { display: grid; grid-template-columns: 1fr 1fr; }
+    .left  { padding: 60px 64px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--border); }
+    .right { padding: 60px 64px; display: flex; flex-direction: column; justify-content: space-between; background: var(--surface); }
+
+    .headline { font-family: var(--font-serif); font-weight: 700; font-size: 44px; line-height: 1; color: var(--text); letter-spacing: -0.025em; margin-top: 12px; margin-bottom: 32px; }
+
+    .stats { display: flex; flex-direction: column; gap: 20px; flex: 1; }
+    .stat-row { display: flex; align-items: baseline; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--border-soft); }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-num { font-family: var(--font-serif); font-style: italic; font-size: 52px; color: var(--primary); line-height: 1; letter-spacing: -0.02em; min-width: 120px; }
+    .stat-desc strong { display: block; font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .stat-desc span { font-size: 12px; color: var(--text-muted); }
+
+    .team-section h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 12px; }
+    .team-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border-soft); }
+    .team-row:last-child { border-bottom: none; }
+    .team-lbl { font-size: 13px; color: rgba(26,26,26,0.7); }
+    .team-val { font-size: 13px; font-weight: 600; color: var(--text); }
+    .team-add { font-size: 13px; font-weight: 600; color: var(--primary); }
+    .note { font-size: 11px; color: var(--text-faint); font-style: italic; margin-top: 12px; }
+    .chip-accent { background: var(--accent); color: var(--accent-text); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Red Team</div><div class="wm">TURBO.</div></div>
-    <div class="title">Growth &amp; Team</div>
-    <div class="grid">
-      <div class="card"><div class="val">240%</div><div class="lbl">LinkedIn Target Hit</div><div class="sub">12,001 followers (5K target)</div></div>
-      <div class="card"><div class="val">7 Hires</div><div class="lbl">Team Expansion</div><div class="sub">Team size doubled</div></div>
-      <div class="card"><div class="val">Promotion</div><div class="lbl">Sergio &rarr; Squad Lead</div><div class="sub">First internal promotion<br>Cami shifted to product</div></div>
-    </div>
-    <div class="bottom">
-      <div class="bs">
-        <h4>Current:</h4>
-        <p>Business side: 2<br>Product &amp; Tech: 2<br>Forward Deployed: 10</p>
+    <div class="left">
+      <div>
+        <div class="section-label" style="color: #d97706;">Red Team</div>
+        <div class="headline">Growth<br>&amp; Team</div>
       </div>
-      <div class="bs">
-        <h4>Q2 hiring plan:</h4>
-        <p>Business side: +2 (Sales/ BD &amp; Ops)<br>Product &amp; Tech: +2 (AI engineer &amp; product)<br>Forward Deployed: +4 (2 more squads)</p>
-        <div class="note">- &nbsp;*All sales have been founder-led or referral*</div>
+      <div class="stats">
+        <div class="stat-row">
+          <div class="stat-num">240%</div>
+          <div class="stat-desc">
+            <strong>LinkedIn Target Hit</strong>
+            <span>12,001 followers &mdash; target was 5K</span>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-num">7</div>
+          <div class="stat-desc">
+            <strong>New Hires</strong>
+            <span>Team size doubled this quarter</span>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-num"><span class="chip-accent">New</span></div>
+          <div class="stat-desc">
+            <strong>Sergio &rarr; Squad Lead</strong>
+            <span>First internal promotion. Cami shifted to product.</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide-num">05 / 12</div>
+    </div>
+    <div class="right">
+      <div>
+        <div class="team-section">
+          <h4>Current Team</h4>
+          <div class="team-row"><span class="team-lbl">Business side</span><span class="team-val">2</span></div>
+          <div class="team-row"><span class="team-lbl">Product &amp; Tech</span><span class="team-val">2</span></div>
+          <div class="team-row"><span class="team-lbl">Forward Deployed</span><span class="team-val">10</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="team-section">
+          <h4>Q2 Hiring Plan</h4>
+          <div class="team-row"><span class="team-lbl">Business (Sales / BD &amp; Ops)</span><span class="team-add">+2</span></div>
+          <div class="team-row"><span class="team-lbl">Product &amp; Tech (AI eng &amp; PM)</span><span class="team-add">+2</span></div>
+          <div class="team-row"><span class="team-lbl">Forward Deployed (2 more squads)</span><span class="team-add">+4</span></div>
+          <div class="note">* All sales have been founder-led or referral</div>
+        </div>
       </div>
     </div>
   </div>

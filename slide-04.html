@@ -4,44 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Pipeline</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 48px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 4px; }
-    .subtitle { font-size: 20px; font-weight: 600; color: #7c5af6; margin-bottom: 20px; }
-    table { width: 730px; border-collapse: collapse; margin-bottom: 20px; }
-    th { font-size: 13px; font-weight: 600; color: #7c5af6; padding: 10px 16px; text-align: left; border: 1px solid rgba(124,90,246,0.4); background: rgba(124,90,246,0.12); }
-    td { font-size: 14px; padding: 10px 16px; border: 1px solid rgba(255,255,255,0.1); color: #fff; }
-    tr:last-child td { font-weight: 600; background: rgba(124,90,246,0.07); }
-    .g { color: #22c55e; font-weight: 500; }
-    .y { color: #e8a020; font-weight: 500; }
-    .callout { background: #1a1048; border: 1px solid rgba(124,90,246,0.4); padding: 18px 24px; max-width: 730px; }
-    .ct { font-size: 14px; font-weight: 600; color: #7c5af6; line-height: 1.8; }
+    .slide { padding: 60px 80px; display: flex; flex-direction: column; }
+    .slide-header { margin-bottom: 8px; }
+    .headline { font-family: var(--font-serif); font-weight: 700; font-size: 48px; line-height: 1; color: var(--text); letter-spacing: -0.025em; margin-bottom: 4px; }
+    .subhead   { font-family: var(--font-serif); font-style: italic; font-size: 22px; color: var(--primary); margin-bottom: 22px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 18px; }
+    th { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); padding: 10px 16px; text-align: left; border-bottom: 2px solid var(--border); }
+    td { font-size: 14px; padding: 12px 16px; border-bottom: 1px solid var(--border-soft); color: var(--text); }
+    tr:last-child td { border-bottom: none; font-weight: 600; background: var(--primary-light); }
+    .g { color: var(--green); font-weight: 500; }
+    .y { color: var(--amber); font-weight: 500; }
+    .val { font-family: var(--font-serif); font-style: italic; font-size: 18px; color: var(--text); }
+    .callout { background: var(--surface); border: 1px solid var(--border-soft); border-left: 3px solid var(--primary); padding: 16px 24px; display: flex; gap: 32px; align-items: center; }
+    .callout-stat { text-align: center; }
+    .cs-val { font-family: var(--font-serif); font-style: italic; font-size: 32px; color: var(--primary); }
+    .cs-lbl { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .callout-text { font-size: 13px; color: var(--text-muted); line-height: 1.6; flex: 1; }
+    .callout-text strong { color: var(--text); }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Pipeline</div><div class="wm">TURBO.</div></div>
-    <div class="title">Pipeline Entering Q2</div>
-    <div class="subtitle">$77,500/mo &nbsp;($930K annualized)</div>
+    <div class="slide-header">
+      <div class="section-label">Pipeline</div>
+      <div class="slide-num">04 / 12</div>
+    </div>
+    <div class="headline">Pipeline Entering Q2</div>
+    <div class="subhead">$77,500 / mo &nbsp;&mdash;&nbsp; $930K annualized</div>
     <table>
       <thead><tr><th>Client</th><th>Monthly Value</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>Internal Scaling (Net Rev Growth)</td><td>$22,500</td><td class="g">Confirmed 01 April &amp; May</td></tr>
-        <tr><td>Continuum</td><td>$9,500</td><td class="g">Confirmed 6 April</td></tr>
-        <tr><td>FlipZen</td><td>$8,000</td><td class="y">Kickoff 13 April</td></tr>
-        <tr><td>Access Point</td><td>$7,500</td><td class="g">Confirmed 27 April</td></tr>
-        <tr><td>Arctic Slope (ASRC)</td><td>$30,000+</td><td class="y">May</td></tr>
-        <tr><td>Total</td><td>$77,500/mo pipeline<br>*next 2 months*</td><td></td></tr>
+        <tr><td>Internal Scaling (Net Rev Growth)</td><td class="val">$22,500</td><td class="g">Confirmed 01 April &amp; May</td></tr>
+        <tr><td>Continuum</td><td class="val">$9,500</td><td class="g">Confirmed 6 April</td></tr>
+        <tr><td>FlipZen</td><td class="val">$8,000</td><td class="y">Kickoff 13 April</td></tr>
+        <tr><td>Access Point</td><td class="val">$7,500</td><td class="g">Confirmed 27 April</td></tr>
+        <tr><td>Arctic Slope (ASRC)</td><td class="val">$30,000+</td><td class="y">May</td></tr>
+        <tr><td>Total &nbsp;— next 2 months</td><td class="val">$77,500 / mo</td><td></td></tr>
       </tbody>
     </table>
     <div class="callout">
-      <div class="ct">Historical Pipeline conversion rate= 100%<br>Upon conversion (assuming no churn): &nbsp;$1.87M run rate (from $0 beginning of Q4)</div>
+      <div class="callout-stat"><div class="cs-val">100%</div><div class="cs-lbl">historical conversion</div></div>
+      <div class="callout-text"><strong>Upon conversion (assuming no churn):</strong> $1.87M run rate &mdash; up from $0 at the beginning of Q4.</div>
     </div>
   </div>
 </body>

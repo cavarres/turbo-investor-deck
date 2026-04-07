@@ -4,32 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Investor Update Q1 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; position: relative; }
-    .purple-band { position: absolute; top: 0; left: 0; right: 0; height: 265px; background: #160b38; }
-    .content { position: relative; padding: 56px 80px; }
-    .logo-line { width: 90px; height: 3px; background: #7c5af6; margin-bottom: 14px; }
-    .wordmark { font-size: 18px; font-weight: 700; letter-spacing: 0.1em; color: #7c5af6; }
-    .main { margin-top: 52px; }
-    .title { font-size: 72px; font-weight: 700; line-height: 1; color: #fff; margin-bottom: 28px; letter-spacing: -0.02em; }
-    .quarter { font-size: 64px; font-weight: 700; color: #7c5af6; line-height: 1; margin-bottom: 72px; letter-spacing: -0.02em; }
-    .author-name { font-size: 18px; font-weight: 400; color: #fff; margin-bottom: 10px; }
-    .meta { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+    .slide { display: grid; grid-template-columns: 1fr 1fr; }
+    .left  { padding: 64px 72px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--border); }
+    .right { padding: 64px 72px; display: flex; flex-direction: column; justify-content: flex-end; background: var(--surface); }
+    .hero  { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+    .hero-label { font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); }
+    .hero-title { font-family: var(--font-serif); font-weight: 700; font-size: 76px; line-height: 0.95; color: var(--text); letter-spacing: -0.025em; }
+    .meta { border-top: 1px solid var(--border); padding-top: 22px; display: flex; flex-direction: column; gap: 6px; }
+    .meta-row { display: flex; align-items: center; gap: 10px; }
+    .quarter-wrap { margin-bottom: 52px; }
+    .quarter-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px; }
+    .quarter { font-family: var(--font-serif); font-style: italic; font-size: 104px; line-height: 0.85; color: var(--primary); letter-spacing: -0.02em; }
+    .author-block { border-top: 1px solid var(--border); padding-top: 24px; }
+    .author-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .author-role { font-size: 13px; color: var(--text-muted); }
+    .num { position: absolute; top: 64px; right: 72px; }
   </style>
 </head>
 <body>
-  <div class="purple-band"></div>
-  <div class="content">
-    <div class="logo-line"></div>
-    <div class="wordmark">TURBO.</div>
-    <div class="main">
-      <div class="title">Investor Update</div>
-      <div class="quarter">Q1 2026</div>
-      <div class="author-name">Jeremy Topp, CEO &amp; Co-Founder</div>
-      <div class="meta">March 2026 &nbsp;&mdash;&nbsp; Confidential<br>(cao 29March2026)</div>
+  <div class="slide">
+    <div class="left">
+      <div class="wordmark">TURBO.</div>
+      <div class="hero">
+        <div class="hero-label">Investor Update</div>
+        <div class="hero-title">The<br>numbers<br>are in.</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="dot-accent"></div>
+          <div class="t-label" style="text-transform:none;letter-spacing:0.02em;font-size:12px;color:var(--text-muted)">March 2026 &nbsp;&mdash;&nbsp; Confidential</div>
+        </div>
+        <div style="padding-left:16px;font-size:11px;color:var(--text-faint2)">(cao 29March2026)</div>
+      </div>
     </div>
+    <div class="right">
+      <div class="quarter-wrap">
+        <div class="quarter-label">Reporting period</div>
+        <div class="quarter">Q1<br>2026</div>
+      </div>
+      <div class="author-block">
+        <div class="author-name">Jeremy Topp</div>
+        <div class="author-role">CEO &amp; Co-Founder</div>
+      </div>
+    </div>
+    <div class="slide-num num">01 / 12</div>
   </div>
 </body>
 </html>
