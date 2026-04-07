@@ -4,42 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — The Flywheel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 44px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 24px; }
-    .story { background: #1a1a38; padding: 32px 36px; margin-bottom: 24px; flex: 1; }
-    .st { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.9); margin-bottom: 12px; }
-    .silence { color: rgba(255,255,255,0.45); font-style: italic; margin-bottom: 12px; font-size: 15px; }
-    .gio-label { color: #7c5af6; font-weight: 700; font-size: 15px; margin-bottom: 8px; }
-    .gio-items { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.9); padding-left: 4px; }
-    .punch { font-size: 15px; font-style: italic; font-weight: 600; color: rgba(255,255,255,0.85); margin-top: 14px; text-decoration: underline; }
-    .bottom { font-size: 17px; font-weight: 600; color: #7c5af6; font-style: italic; text-align: center; }
-    .bottom span { text-decoration: underline; }
+    .slide { display: grid; grid-template-columns: 380px 1fr; }
+    .left  { padding: 60px 52px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--border); }
+    .right { padding: 60px 60px; display: flex; flex-direction: column; background: var(--surface); }
+
+    .headline { font-family: var(--font-serif); font-weight: 700; font-size: 42px; line-height: 1.05; color: var(--text); letter-spacing: -0.025em; margin-top: 12px; }
+
+    .story-block { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+    .st { font-size: 15px; line-height: 1.75; color: rgba(26,26,26,0.80); }
+    .silence { color: var(--text-muted); font-style: italic; font-size: 15px; }
+    .gio-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); margin-bottom: -4px; }
+    .gio-items { font-size: 15px; line-height: 1.8; color: var(--text); }
+    .punch { font-size: 15px; font-style: italic; font-weight: 600; color: var(--text); border-top: 1px solid var(--border); padding-top: 16px; margin-top: 4px; }
+    .punch u { text-decoration-color: var(--primary); }
+
+    .bottom-strip { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); }
+    .bottom { font-family: var(--font-serif); font-style: italic; font-size: 16px; font-weight: 400; color: var(--primary); line-height: 1.5; }
+    .bottom span { font-weight: 700; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Story 3: McKinsey-level Insights</div><div class="wm">TURBO.</div></div>
-    <div class="title">The Flywheel - Insights to implementation</div>
-    <div class="story">
-      <div class="st">SBC had 15% churn.</div>
-      <div class="st">Their CEO asked a 20-person team how to get to 1%.</div>
-      <div class="silence">Silence.</div>
-      <div class="gio-label">Gio answered:</div>
-      <div class="gio-items">
-        &bull; 60% marketing misalignment - marketing<br>
-        &bull; 20% delivery too fast - business model<br>
-        &bull; 20% onboarding churn = <u><em>product development priorities</em></u>
+    <div class="left">
+      <div>
+        <div class="section-label">Story 3: McKinsey-level Insights</div>
+        <div class="headline">The Flywheel &mdash; Insights to implementation</div>
       </div>
-      <div class="punch">That&rsquo;s a 20-person company. Now imagine 2,000. You&rsquo;d hire McKinsey. Not anymore.</div>
+      <div class="slide-num">09 / 12</div>
     </div>
-    <div class="bottom"><span>&ldquo;These insights feed the flywheel. This cycle becomes the company&rsquo;s operating system.&rdquo;</span></div>
+    <div class="right">
+      <div class="story-block">
+        <div class="st">SBC had 15% churn.</div>
+        <div class="st">Their CEO asked a 20-person team how to get to 1%.</div>
+        <div class="silence">Silence.</div>
+        <div class="gio-label">Gio answered:</div>
+        <div class="gio-items">
+          &bull; 60% marketing misalignment &mdash; marketing<br>
+          &bull; 20% delivery too fast &mdash; business model<br>
+          &bull; 20% onboarding churn = <u><em>product development priorities</em></u>
+        </div>
+        <div class="punch">That&rsquo;s a 20-person company. Now imagine 2,000. You&rsquo;d hire McKinsey. Not anymore.</div>
+      </div>
+      <div class="bottom-strip">
+        <div class="bottom"><span>&ldquo;These insights feed the flywheel. This cycle becomes the company&rsquo;s operating system.&rdquo;</span></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

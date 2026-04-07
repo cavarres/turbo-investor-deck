@@ -4,30 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Closing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; position: relative; }
-    .purple-band { position: absolute; top: 0; left: 0; right: 0; height: 265px; background: #160b38; }
-    .content { position: relative; padding: 56px 80px; display: flex; flex-direction: column; height: 100%; }
-    .logo-line { width: 90px; height: 3px; background: #7c5af6; margin-bottom: 14px; }
-    .wordmark { font-size: 18px; font-weight: 700; letter-spacing: 0.1em; color: #7c5af6; margin-bottom: 48px; }
-    .quote { font-size: 36px; font-weight: 700; line-height: 1.3; color: #fff; letter-spacing: -0.02em; margin-bottom: 56px; max-width: 900px; }
-    .contact { margin-bottom: 12px; }
-    .email { font-size: 16px; font-weight: 500; color: #7c5af6; margin-bottom: 6px; }
-    .linkedin { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
-    .conf { font-size: 14px; color: rgba(255,255,255,0.4); }
+    .slide { display: grid; grid-template-columns: 1fr 1fr; }
+    .left  { padding: 64px 72px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--border); background: var(--primary); }
+    .right { padding: 64px 72px; display: flex; flex-direction: column; justify-content: space-between; background: var(--surface); }
+
+    .wordmark-white { font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+
+    .quote-block { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+    .quote { font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 30px; line-height: 1.35; color: #fff; letter-spacing: -0.02em; }
+    .accent-bar { width: 48px; height: 4px; background: var(--accent); }
+
+    .contact-block { display: flex; flex-direction: column; gap: 6px; }
+    .contact-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+    .email { font-size: 16px; font-weight: 600; color: #fff; }
+    .linkedin { font-size: 14px; color: rgba(255,255,255,0.7); }
+
+    .right-top { display: flex; flex-direction: column; gap: 32px; }
+    .tagline { font-family: var(--font-serif); font-weight: 700; font-size: 52px; line-height: 1.02; color: var(--primary); letter-spacing: -0.025em; }
+    .conf { font-size: 12px; color: var(--text-faint); margin-top: auto; }
+    .slide-num-white { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); }
   </style>
 </head>
 <body>
-  <div class="purple-band"></div>
-  <div class="content">
-    <div class="logo-line"></div>
-    <div class="wordmark">TURBO.</div>
-    <div class="quote">&ldquo;This is not a product development tool. It is far bigger than a product development system. This is an operating system. This is the future of the computer.&rdquo;</div>
-    <div class="email">jeremy@turbotime.io</div>
-    <div class="linkedin">linkedin.com/company/turbotime-ai</div>
-    <div class="conf">Confidential &nbsp;&mdash;&nbsp; March 2026</div>
+  <div class="slide">
+    <div class="left">
+      <div class="wordmark-white">TURBO.</div>
+      <div class="quote-block">
+        <div class="accent-bar"></div>
+        <div class="quote">&ldquo;This is not a product development tool. It is far bigger than a product development system. This is an operating system. This is the future of the computer.&rdquo;</div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-label">Get in touch</div>
+        <div class="email">jeremy@turbotime.io</div>
+        <div class="linkedin">linkedin.com/company/turbotime-ai</div>
+      </div>
+      <div class="slide-num-white">12 / 12</div>
+    </div>
+    <div class="right">
+      <div class="wordmark">TURBO.</div>
+      <div class="tagline">The future<br>of the<br>computer.</div>
+      <div class="conf">Confidential &nbsp;&mdash;&nbsp; March 2026</div>
+    </div>
   </div>
 </body>
 </html>

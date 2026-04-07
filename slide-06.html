@@ -4,50 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Product &amp; Delivery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #e8a020; }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 48px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 20px; }
-    table { width: 900px; border-collapse: collapse; margin-bottom: 20px; }
-    th { font-size: 13px; font-weight: 600; padding: 10px 16px; text-align: left; border: 1px solid rgba(124,90,246,0.4); background: rgba(124,90,246,0.12); }
-    th:first-child { color: #7c5af6; }
-    th:last-child { color: #7c5af6; }
-    td { font-size: 14px; padding: 10px 16px; border: 1px solid rgba(255,255,255,0.1); color: #fff; }
-    .g { color: #22c55e; }
-    .callout { background: #1a1a38; padding: 20px 28px; }
-    .ct { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 14px; }
-    .stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+    .slide { display: grid; grid-template-columns: 380px 1fr; }
+    .left  { padding: 60px 52px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--border); }
+    .right { padding: 60px 60px; display: flex; flex-direction: column; background: var(--surface); }
+
+    .headline { font-family: var(--font-serif); font-weight: 700; font-size: 46px; line-height: 1.02; color: var(--text); letter-spacing: -0.025em; margin-top: 12px; margin-bottom: 32px; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+    th { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border); }
+    td { font-size: 14px; padding: 13px 14px; border-bottom: 1px solid var(--border-soft); color: var(--text); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    .status-done { color: var(--green); font-weight: 600; }
+
+    .callout-block { background: var(--bg); border: 1px solid var(--border-soft); border-left: 3px solid var(--primary); padding: 20px 24px; flex: 1; }
+    .callout-title { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 18px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .stat { text-align: center; }
-    .sv { font-size: 24px; font-weight: 700; color: #7c5af6; margin-bottom: 4px; }
-    .sl { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.3; }
+    .sv { font-family: var(--font-serif); font-style: italic; font-size: 30px; color: var(--primary); letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+    .sl { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Gold Team</div><div class="wm">TURBO.</div></div>
-    <div class="title">Product &amp; Delivery</div>
-    <table>
-      <thead><tr><th>Deliverable</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr><td>Client-facing Gio</td><td class="g">Shipping to clients (this week) ✅</td></tr>
-        <tr><td>The Hand prototype</td><td><span class="g">Shipping internal (April) ✅</span><br>Shipping external (May)</td></tr>
-        <tr><td>PM Automation</td><td><span class="g">Q2 ✅</span></td></tr>
-      </tbody>
-    </table>
-    <div class="callout">
-      <div class="ct">Case Study: Proof of Concept</div>
-      <div class="stats">
-        <div class="stat"><div class="sv">93.7%</div><div class="sl">Commits</div></div>
-        <div class="stat"><div class="sv">91.4%</div><div class="sl">Code Changes</div></div>
-        <div class="stat"><div class="sv">654</div><div class="sl">Gio Completions</div></div>
-        <div class="stat"><div class="sv">25K+</div><div class="sl">Tool Calls</div></div>
-        <div class="stat"><div class="sv">24:1</div><div class="sl">Output Ratio</div></div>
-        <div class="stat"><div class="sv">6 FTEs</div><div class="sl">Replaced for $22.5K/mo</div></div>
+    <div class="left">
+      <div>
+        <div class="section-label" style="color: var(--amber);">Gold Team</div>
+        <div class="headline">Product<br>&amp; Delivery</div>
+      </div>
+      <div class="slide-num">06 / 12</div>
+    </div>
+    <div class="right">
+      <table>
+        <thead>
+          <tr><th>Deliverable</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Client-facing Gio</td>
+            <td><span class="status-done">Shipping to clients (this week) ✅</span></td>
+          </tr>
+          <tr>
+            <td>The Hand prototype</td>
+            <td>
+              <span class="status-done">Shipping internal (April) ✅</span><br>
+              <span style="color:var(--text-muted)">Shipping external (May)</span>
+            </td>
+          </tr>
+          <tr>
+            <td>PM Automation</td>
+            <td><span class="status-done">Q2 ✅</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout-block">
+        <div class="callout-title">Case Study: Proof of Concept</div>
+        <div class="stats">
+          <div class="stat"><div class="sv">93.7%</div><div class="sl">Commits</div></div>
+          <div class="stat"><div class="sv">91.4%</div><div class="sl">Code Changes</div></div>
+          <div class="stat"><div class="sv">654</div><div class="sl">Gio Completions</div></div>
+          <div class="stat"><div class="sv">25K+</div><div class="sl">Tool Calls</div></div>
+          <div class="stat"><div class="sv">24:1</div><div class="sl">Output Ratio</div></div>
+          <div class="stat"><div class="sv">6 FTEs</div><div class="sl">Replaced for $22.5K/mo</div></div>
+        </div>
       </div>
     </div>
   </div>

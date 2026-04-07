@@ -4,34 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Q2 Goals</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 48px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 28px; }
+    .slide { padding: 56px 80px; display: flex; flex-direction: column; }
+    .slide-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+
+    .headline { font-family: var(--font-serif); font-weight: 700; font-size: 48px; line-height: 1; color: var(--text); letter-spacing: -0.025em; margin-bottom: 28px; }
+
     .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; flex: 1; }
-    .col { background: #1a1a38; padding: 24px 28px; border: 1px solid rgba(255,255,255,0.07); display: flex; flex-direction: column; gap: 10px; }
-    .col-title { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-    .purple { color: #7c5af6; }
-    .yellow { color: #e8a020; }
-    .blue { color: #60a5fa; }
-    .sub { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 4px; }
-    .items { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
-    .items li { margin-left: 16px; margin-bottom: 2px; }
-    .nested { margin-left: 28px; }
+    .col { background: var(--surface); border: 1px solid var(--border-soft); padding: 28px 28px; display: flex; flex-direction: column; gap: 10px; }
+    .col:first-child { border-top: 3px solid var(--primary); }
+    .col:nth-child(2) { border-top: 3px solid var(--accent); }
+    .col:last-child  { border-top: 3px solid var(--primary); }
+
+    .col-title { font-family: var(--font-serif); font-weight: 700; font-size: 22px; line-height: 1.1; margin-bottom: 6px; letter-spacing: -0.015em; }
+    .col-title-primary { color: var(--primary); }
+    .col-title-accent  { color: #1A1A1A; }
+
+    .sub { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+    .items { font-size: 13px; color: rgba(26,26,26,0.7); line-height: 1.8; list-style: none; padding: 0; }
+    .items li { padding-left: 14px; position: relative; margin-bottom: 3px; }
+    .items li::before { content: "—"; position: absolute; left: 0; color: var(--text-faint2); font-size: 11px; top: 2px; }
+    .nested { margin-left: 14px; margin-top: 4px; }
+    .nested li::before { content: "·"; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Strategic Milestones</div><div class="wm">TURBO.</div></div>
-    <div class="title">Q2 Goals</div>
+    <div class="slide-header">
+      <div class="section-label">Strategic Milestones</div>
+      <div class="slide-num">11 / 12</div>
+    </div>
+    <div class="headline">Q2 Goals</div>
     <div class="cols">
       <div class="col">
-        <div class="col-title purple">Double Revenues</div>
+        <div class="col-title col-title-primary">Double Revenues</div>
         <div class="sub">Target: $2M run rate</div>
         <ul class="items">
           <li>Net revenue growth</li>
@@ -40,7 +47,7 @@
         </ul>
       </div>
       <div class="col">
-        <div class="col-title yellow">The Hand</div>
+        <div class="col-title col-title-accent" style="background: var(--accent); display: inline-block; padding: 2px 10px; margin-bottom: 2px;">The Hand</div>
         <div class="sub">...coming soon</div>
         <ul class="items">
           <li>A personalized, private agent manager for individuals all other agents, tools, and products.</li>
@@ -48,17 +55,17 @@
         </ul>
       </div>
       <div class="col">
-        <div class="col-title blue">Service to Platform</div>
+        <div class="col-title col-title-primary">Service to Platform</div>
         <div class="sub">significant pricing leverage</div>
         <ul class="items">
           <li>Today
-            <ul class="nested">
+            <ul class="nested items">
               <li>1 squad = 200 hrs of work / week</li>
               <li>Fanout rate = 5</li>
             </ul>
           </li>
           <li>Tomorrow
-            <ul class="nested">
+            <ul class="nested items">
               <li>1 squad = 800 hrs of work / week</li>
               <li>Fanout rate = 20</li>
             </ul>

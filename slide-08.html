@@ -4,33 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Turbo — Orchestration</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 1280px; height: 720px; overflow: hidden; background: #0c0c1e; font-family: 'Inter', sans-serif; color: #fff; }
-    .slide { width: 1280px; height: 720px; padding: 44px 80px; display: flex; flex-direction: column; }
-    .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .sec { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); max-width: 700px; }
-    .wm { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #7c5af6; }
-    .title { font-size: 44px; font-weight: 700; letter-spacing: -0.025em; color: #fff; margin-bottom: 20px; }
+    .slide { padding: 56px 80px; display: flex; flex-direction: column; }
+    .slide-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+
+    .headline { font-family: var(--font-serif); font-weight: 700; font-size: 46px; line-height: 1.02; color: var(--text); letter-spacing: -0.025em; margin-bottom: 28px; }
+
     .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 12px; }
-    .stat { background: #1a1a38; padding: 24px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.07); }
-    .sv { font-size: 52px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
-    .sv-a { color: #7c5af6; }
-    .sv-h { color: #e8a020; }
-    .sv-w { color: #60a5fa; }
-    .sl { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; }
-    .caption { font-size: 14px; color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 16px; }
-    .cascade { background: #1a1048; border: 1px solid rgba(124,90,246,0.3); padding: 18px 24px; margin-bottom: 16px; }
-    .ct { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 10px; }
-    .cf { font-size: 13px; color: #7c5af6; line-height: 1.6; }
-    .bottom { font-size: 18px; font-weight: 700; color: #fff; text-align: center; }
+    .stat { background: var(--surface); border: 1px solid var(--border-soft); padding: 24px 28px; text-align: center; }
+    .sv { font-family: var(--font-serif); font-style: italic; font-size: 56px; line-height: 0.9; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .sv-a { color: var(--primary); }
+    .sv-h { color: var(--amber); }
+    .sv-w { color: var(--text-muted); }
+    .sl { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+
+    .caption { font-size: 13px; color: var(--text-muted); text-align: center; margin-bottom: 20px; }
+
+    .cascade { background: var(--surface); border: 1px solid var(--border-soft); border-left: 3px solid var(--primary); padding: 18px 24px; margin-bottom: 20px; }
+    .ct { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 10px; letter-spacing: 0.02em; }
+    .cf { font-size: 13px; color: var(--primary); line-height: 1.7; }
+
+    .bottom { font-family: var(--font-serif); font-style: italic; font-size: 20px; font-weight: 700; color: var(--text); text-align: center; letter-spacing: -0.01em; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec">Story 2: Agentic Middle Management&mdash; The Hand's Origin</div><div class="wm">TURBO.</div></div>
-    <div class="title">Next: Orchestration of agentic teams</div>
+    <div class="slide-header">
+      <div class="section-label">Story 2: Agentic Middle Management &mdash; The Hand's Origin</div>
+      <div class="slide-num">08 / 12</div>
+    </div>
+    <div class="headline">Next: Orchestration of agentic teams</div>
     <div class="stats">
       <div class="stat"><div class="sv sv-a">~4%</div><div class="sl">Agent Work Time</div></div>
       <div class="stat"><div class="sv sv-h">~16%</div><div class="sl">Human Work Time</div></div>
