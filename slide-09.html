@@ -10,12 +10,12 @@
     .title { font-size: 40px; margin-bottom: 20px; }
     .story { background: var(--card); border: 1.5px solid var(--border); padding: 28px 34px; margin-bottom: 18px; flex: 1; border-radius: 4px; }
     .st { font-size: 15px; line-height: 1.75; color: var(--text); margin-bottom: 10px; }
-    .silence { color: var(--muted); font-style: italic; margin-bottom: 10px; font-size: 15px; }
+    .silence { font-size: 20px; letter-spacing: 0.06em; color: var(--primary); font-style: italic; font-weight: 600; display: block; margin: 14px 0; }
     .gio-label { color: var(--primary); font-weight: 700; font-size: 14px; margin-bottom: 6px; }
     .gio-items { font-size: 14px; line-height: 1.75; color: var(--text); padding-left: 4px; }
+    .chip-pct { display: inline-block; background: var(--lime); color: var(--text); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; padding: 3px 10px; border-radius: 2px; margin-right: 6px; }
     .punch { font-size: 14px; font-style: italic; font-weight: 600; color: var(--text); margin-top: 12px; text-decoration: underline; }
-    .bottom { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--primary); font-style: italic; text-align: center; }
-    .bottom span { text-decoration: underline; }
+    .bottom { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--primary); font-style: italic; text-align: center; }
     .sec-sm { max-width: 700px; font-size: 10.5px; }
   </style>
 </head>
@@ -29,13 +29,13 @@
       <div class="silence">Silence.</div>
       <div class="gio-label">Gio answered:</div>
       <div class="gio-items">
-        &bull; 60% marketing misalignment - marketing<br>
-        &bull; 20% delivery too fast - business model<br>
-        &bull; 20% onboarding churn = <u><em>product development priorities</em></u>
+        <span class="chip-pct">60%</span> marketing misalignment - marketing<br>
+        <span class="chip-pct">20%</span> delivery too fast - business model<br>
+        <span class="chip-pct">20%</span> onboarding churn = <u><em>product development priorities</em></u>
       </div>
       <div class="punch">That&rsquo;s a 20-person company. Now imagine 2,000. You&rsquo;d hire McKinsey. Not anymore.</div>
     </div>
-    <div class="bottom"><span>&ldquo;These insights feed the flywheel. This cycle becomes the company&rsquo;s operating system.&rdquo;</span></div>
+    <div class="bottom">&ldquo;These insights feed the flywheel. This cycle becomes the company&rsquo;s operating system.&rdquo;</div>
   </div>
 </body>
 </html>

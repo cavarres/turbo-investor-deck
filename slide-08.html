@@ -13,12 +13,14 @@
     .sv { font-family: var(--font-display); font-size: 48px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
     .sv-a { color: var(--primary); }
     .sv-h { color: var(--pink); }
-    .sv-w { color: #92600a; }
+    .sv-w { color: var(--text); opacity: 0.5; }
     .sl { font-size: 13px; color: var(--muted); font-weight: 500; }
     .caption { font-size: 13px; color: var(--muted); text-align: center; margin-bottom: 16px; font-style: italic; }
     .cascade { background: var(--card-tint); border: 1.5px solid var(--border); border-left: 3px solid var(--primary); padding: 16px 22px; margin-bottom: 16px; border-radius: 4px; }
     .ct { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
-    .cf { font-size: 13px; color: var(--primary); line-height: 1.65; }
+    .cf-row { font-size: 13px; color: var(--primary); padding: 4px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0; }
+    .cf-row:last-child { border-bottom: none; }
+    .step-num { color: var(--primary); font-weight: 700; margin-right: 8px; min-width: 28px; }
     .bottom { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text); text-align: center; padding: 16px; background: var(--card); border: 1.5px solid var(--border); border-radius: 4px; }
     .sec-sm { max-width: 700px; font-size: 10.5px; }
   </style>
@@ -35,7 +37,11 @@
     <div class="caption">75% of decisions take &lt;5 minutes = highly automatable</div>
     <div class="cascade">
       <div class="ct">Decision Cascade</div>
-      <div class="cf">Can the model solve it? &rarr; Has Gio solved it for this team before? (RAG pipeline) &rarr; Escalate to The Hand (Agentic Management Layer) &rarr; Escalate to Forward Deployed Squad &rarr; Add to hive mind database</div>
+      <div class="cf-row"><span class="step-num">01</span>Can the model solve it?</div>
+      <div class="cf-row"><span class="step-num">02</span>Has Gio solved it for this team before? (RAG pipeline)</div>
+      <div class="cf-row"><span class="step-num">03</span>Escalate to The Hand (Agentic Management Layer)</div>
+      <div class="cf-row"><span class="step-num">04</span>Escalate to Forward Deployed Squad</div>
+      <div class="cf-row"><span class="step-num">05</span>Add to hive mind database</div>
     </div>
     <div class="bottom">&ldquo;Result: Our output in 30 minutes just 100x&rsquo;d and self-improves&rdquo;</div>
   </div>

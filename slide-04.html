@@ -9,14 +9,15 @@
     .slide { padding: 40px 80px; }
     .title { font-size: 44px; margin-bottom: 4px; }
     .subtitle { font-size: 18px; font-weight: 600; color: var(--primary); margin-bottom: 20px; }
-    table { width: 730px; border-collapse: collapse; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
     th { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 10px 16px; text-align: left; border-bottom: 1.5px solid var(--border); background: var(--card-tint); }
     td { font-size: 13.5px; padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text); }
-    tr:last-child td { font-weight: 600; background: var(--card-tint); border-bottom: none; }
-    .g { color: #1a7a3c; font-weight: 500; }
-    .y { color: #92600a; font-weight: 500; }
-    .callout { background: var(--card-tint); border: 1.5px solid var(--border); border-left: 3px solid var(--primary); padding: 16px 22px; max-width: 730px; border-radius: 4px; }
-    .ct { font-size: 13.5px; font-weight: 500; color: var(--text); line-height: 1.75; }
+    .total-row td { font-size: 14.5px; font-weight: 600; background: var(--primary); color: #fff; border-bottom: none; }
+    .g { color: var(--primary); font-weight: 500; }
+    .y { color: var(--pink); font-weight: 500; }
+    .callout { background: var(--card-tint); border: 1.5px solid var(--border); border-left: 3px solid var(--primary); padding: 16px 22px; border-radius: 4px; }
+    .ct { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.75; }
+    .ct-stat { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--primary); display: block; }
   </style>
 </head>
 <body>
@@ -32,11 +33,11 @@
         <tr><td>FlipZen</td><td>$8,000</td><td class="y">Kickoff 13 April</td></tr>
         <tr><td>Access Point</td><td>$7,500</td><td class="g">Confirmed 27 April</td></tr>
         <tr><td>Arctic Slope (ASRC)</td><td>$30,000+</td><td class="y">May</td></tr>
-        <tr><td>Total</td><td>$77,500/mo pipeline<br>*next 2 months*</td><td></td></tr>
+        <tr class="total-row"><td>Total</td><td>$77,500/mo pipeline<br><em>next 2 months</em></td><td></td></tr>
       </tbody>
     </table>
     <div class="callout">
-      <div class="ct">Historical Pipeline conversion rate= 100%<br>Upon conversion (assuming no churn): &nbsp;$1.87M run rate (from $0 beginning of Q4)</div>
+      <div class="ct"><span class="ct-stat">Historical Pipeline conversion rate = 100%</span>Upon conversion (assuming no churn): &nbsp;$1.87M run rate (from $0 beginning of Q4)</div>
     </div>
   </div>
 </body>

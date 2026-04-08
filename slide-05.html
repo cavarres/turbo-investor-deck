@@ -10,24 +10,25 @@
     .title { font-size: 44px; margin-bottom: 24px; }
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
     .card { background: var(--card); border: 1.5px solid var(--border); padding: 24px 26px; border-radius: 4px; }
+    .card-promo { background: var(--card); border: 1.5px solid var(--border); border-left: 3px solid var(--lime); padding: 24px 26px; border-radius: 4px; }
     .val { font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 10px; letter-spacing: -0.02em; }
     .lbl { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
     .sub { font-size: 12px; color: var(--muted); line-height: 1.5; }
     .bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .bs { background: var(--card-tint); border: 1.5px solid var(--border); padding: 20px; border-radius: 4px; }
     .bs h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
     .bs p { font-size: 13px; color: var(--text); line-height: 1.75; }
     .note { font-size: 12px; color: var(--muted); margin-top: 10px; font-style: italic; }
-    .sec-red { color: var(--pink); }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="hdr"><div class="sec sec-red">Red Team</div><div class="wm">TURBO.</div></div>
+    <div class="hdr"><div class="sec">Red Team</div><div class="wm">TURBO.</div></div>
     <div class="title">Growth &amp; Team</div>
     <div class="grid">
       <div class="card"><div class="val">240%</div><div class="lbl">LinkedIn Target Hit</div><div class="sub">12,001 followers (5K target)</div></div>
       <div class="card"><div class="val">7 Hires</div><div class="lbl">Team Expansion</div><div class="sub">Team size doubled</div></div>
-      <div class="card"><div class="val">Promotion</div><div class="lbl">Sergio &rarr; Squad Lead</div><div class="sub">First internal promotion<br>Cami shifted to product</div></div>
+      <div class="card-promo"><div class="val">1st Promotion</div><div class="lbl">Sergio &rarr; Squad Lead</div><div class="sub">First internal promotion<br>Cami shifted to product</div></div>
     </div>
     <div class="bottom">
       <div class="bs">
@@ -37,7 +38,7 @@
       <div class="bs">
         <h4>Q2 hiring plan:</h4>
         <p>Business side: +2 (Sales/ BD &amp; Ops)<br>Product &amp; Tech: +2 (AI engineer &amp; product)<br>Forward Deployed: +4 (2 more squads)</p>
-        <div class="note">- &nbsp;*All sales have been founder-led or referral*</div>
+        <div class="note"><em>All sales have been founder-led or referral</em></div>
       </div>
     </div>
   </div>

@@ -8,15 +8,18 @@
   <style>
     .slide { padding: 40px 80px; }
     .title { font-size: 44px; margin-bottom: 28px; }
-    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 36px; }
+    .grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 36px; }
     .card { border: 1.5px solid var(--border); background: var(--card); padding: 28px 24px; border-radius: 4px; }
+    .card-hero { border: 1.5px solid var(--border); background: var(--card-tint); padding: 28px 24px; border-radius: 4px; border-left: 3px solid var(--primary); }
     .val { font-family: var(--font-display); font-size: 44px; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .val-hero { font-family: var(--font-display); font-size: 56px; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 12px; letter-spacing: -0.02em; }
     .lbl { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
     .sub { font-size: 11px; color: var(--muted); }
     .bottom { display: flex; gap: 56px; align-items: baseline; padding-top: 20px; border-top: 1px solid var(--border); }
     .bi { display: flex; gap: 10px; align-items: baseline; }
     .bl { font-size: 14px; color: var(--muted); }
-    .bv { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+    .bv { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+    .bv-primary { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--primary); letter-spacing: -0.02em; }
   </style>
 </head>
 <body>
@@ -24,14 +27,14 @@
     <div class="hdr"><div class="sec">Headline Metrics</div><div class="wm">TURBO.</div></div>
     <div class="title">The Numbers</div>
     <div class="grid">
-      <div class="card"><div class="val">$1.9M</div><div class="lbl">Pipeline Run Rate</div><div class="sub">~40% in paid pipeline</div></div>
+      <div class="card-hero"><div class="val-hero">$1.9M</div><div class="lbl">Pipeline Run Rate</div><div class="sub">~40% in paid pipeline</div></div>
       <div class="card"><div class="val">$86K</div><div class="lbl">Active MRR</div><div class="sub">12 seats across 9 clients</div></div>
       <div class="card"><div class="val">12,001</div><div class="lbl">LinkedIn Followers</div><div class="sub">240% of 5K target</div></div>
       <div class="card"><div class="val">93.7%</div><div class="lbl">Commit Share</div><div class="sub">SBC case study</div></div>
     </div>
     <div class="bottom">
       <div class="bi"><div class="bl">Size of team:</div><div class="bv">14</div></div>
-      <div class="bi"><div class="bl">Runway:</div><div class="bv">45 months</div></div>
+      <div class="bi"><div class="bl">Runway:</div><div class="bv-primary">45 months</div></div>
     </div>
   </div>
 </body>
